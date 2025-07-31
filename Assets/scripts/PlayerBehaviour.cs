@@ -38,13 +38,6 @@ public class PlayerBehaviour : MonoBehaviour
             
     }
 
-    void OnInteract()
-    {
-        Debug.Log("OnInteract called");
-        if (canInteract && currentDoor != null)
-        {
-            currentDoor.Interact(); // Call the Interact method on the DoorBehaviour script
-        }
-    }
+    
 
 }

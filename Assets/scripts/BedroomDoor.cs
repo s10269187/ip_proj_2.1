@@ -1,32 +1,33 @@
 using UnityEngine;
 
-public class MainDoor : MonoBehaviour
+public class BedroomDoor : MonoBehaviour
 {
-    public Transform door;                // Assign your door Transform in inspector
-    public float openAngle = 120f;        // Rotation angle for open
-    public float speed = 2f;              // Speed of rotation
+    public Transform player;
+    public float interactDistance = 3f;
+    public float openAngle = 90f;
+    public float speed = 2f;
+    public KeyCode interactKey = KeyCode.E;
 
-    private bool isOpen = false;
-    private Quaternion closedRotation;
-    private Quaternion openedRotation;
+    private Quaternion initialRotation;
+    private Quaternion openRotation;
+    private bool doorIsOpen = false;
 
     void Start()
     {
-        if (door == null)
-            door = transform;
-
-        closedRotation = door.rotation;
-        openedRotation = Quaternion.Euler(door.eulerAngles + new Vector3(0, openAngle, 0));
+        initialRotation = transform.rotation;
+        openRotation = Quaternion.Euler(0f, openAngle, 0f) * initialRotation;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        float distance = Vector3.Distance(player.position, transform.position);
+
+        if (distance <= interactDistance && Input.GetKeyDown(interactKey))
         {
-            isOpen = !isOpen; // Toggle state
+            doorIsOpen = !doorIsOpen;
         }
 
-        Quaternion targetRotation = isOpen ? openedRotation : closedRotation;
-        door.rotation = Quaternion.Lerp(door.rotation, targetRotation, Time.deltaTime * speed);
+        Quaternion targetRotation = doorIsOpen ? openRotation : initialRotation;
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed);
     }
 }
