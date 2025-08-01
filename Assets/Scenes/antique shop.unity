@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cashier
       objectReference: {fileID: 0}
+    - target: {fileID: 6081082221598964133, guid: 1c67963b107f1b645ae94b803cc1c61c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6803b884f28315440bee9424c5f30cf9, type: 2}
     - target: {fileID: 7595584116440683119, guid: 1c67963b107f1b645ae94b803cc1c61c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4254,6 +4258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2candle1
       objectReference: {fileID: 0}
+    - target: {fileID: 2733039272860306738, guid: 8ca8f0caf01579b46afe757dda17e698, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e52b87ae7e197e240bb0a30d0d019a95, type: 2}
     - target: {fileID: 4496006884713983442, guid: 8ca8f0caf01579b46afe757dda17e698, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4352,10 +4360,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2252067355707195643, guid: a8ad5a5c022f41a4f8c74d90fda3599e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e52b87ae7e197e240bb0a30d0d019a95, type: 2}
     - target: {fileID: 4375192937740941231, guid: a8ad5a5c022f41a4f8c74d90fda3599e, type: 3}
       propertyPath: m_Name
       value: 1candle
       objectReference: {fileID: 0}
+    - target: {fileID: 5362850928264838409, guid: a8ad5a5c022f41a4f8c74d90fda3599e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e52b87ae7e197e240bb0a30d0d019a95, type: 2}
+    - target: {fileID: 7675997950370944478, guid: a8ad5a5c022f41a4f8c74d90fda3599e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e52b87ae7e197e240bb0a30d0d019a95, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5551,6 +5571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ext_sign2
       objectReference: {fileID: 0}
+    - target: {fileID: 7184692483857277470, guid: 8878d4a81154cc94893091a31303ce33, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a913f2a6e21fae4dbc74ae0372db610, type: 2}
     - target: {fileID: 9097098707227537670, guid: 8878d4a81154cc94893091a31303ce33, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5671,6 +5695,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1305257410}
     m_Modifications:
+    - target: {fileID: 170261709716189015, guid: 015905091e0bb2e42812be5aa4a454c3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e52b87ae7e197e240bb0a30d0d019a95, type: 2}
     - target: {fileID: 958305074980352242, guid: 015905091e0bb2e42812be5aa4a454c3, type: 3}
       propertyPath: m_Name
       value: 2cashierlampo
