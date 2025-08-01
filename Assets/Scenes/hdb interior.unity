@@ -1080,7 +1080,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6308182268936927134, guid: e1327bf9d7e1ec34582bb34109433cf3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 642506050}
   m_SourcePrefab: {fileID: 100100000, guid: e1327bf9d7e1ec34582bb34109433cf3, type: 3}
 --- !u!1001 &535926634
 PrefabInstance:
@@ -1340,6 +1343,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599828456}
   m_CullTransparentMesh: 1
+--- !u!1 &642506045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6308182268936927134, guid: e1327bf9d7e1ec34582bb34109433cf3, type: 3}
+  m_PrefabInstance: {fileID: 510310924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &642506050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642506045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a061e0971ba04e34a8ab731054086615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 360
 --- !u!1001 &719721037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1422,7 +1443,7 @@ Transform:
   m_GameObject: {fileID: 745380129}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.5, y: 0.34839535, z: -14.42}
+  m_LocalPosition: {x: 14.52, y: 0.34839535, z: -14.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1569,6 +1590,10 @@ PrefabInstance:
     - target: {fileID: 7094977340588366727, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
       propertyPath: m_Name
       value: NestedParent_Unpack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465301701574439286, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
