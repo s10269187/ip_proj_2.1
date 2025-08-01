@@ -873,9 +873,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1013986756275769583, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: leftDoor
+      value: 
+      objectReference: {fileID: 285217756}
+    - target: {fileID: 1013986756275769583, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013986756275769583, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: rightDoor
+      value: 
+      objectReference: {fileID: 350039379}
+    - target: {fileID: 1013986756275769583, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: promptText
+      value: 
+      objectReference: {fileID: 599828458}
+    - target: {fileID: 1013986756275769583, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 176125423}
     - target: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
       propertyPath: m_Name
       value: cabinet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958792517805305992, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4484106957331255840, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
       propertyPath: m_LocalPosition.x
@@ -929,11 +953,59 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 176125423}
+    - target: {fileID: 6824016236866814685, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: leftDoor
+      value: 
+      objectReference: {fileID: 285217756}
+    - target: {fileID: 6824016236866814685, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824016236866814685, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: rightDoor
+      value: 
+      objectReference: {fileID: 350039379}
+    - target: {fileID: 6824016236866814685, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: promptText
+      value: 
+      objectReference: {fileID: 599828458}
+    - target: {fileID: 6824016236866814685, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 176125423}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 471932344}
+    - targetCorrespondingSourceObject: {fileID: 283652633039661350, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1510354017}
   m_SourcePrefab: {fileID: 100100000, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+--- !u!1 &471932343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+  m_PrefabInstance: {fileID: 471932342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &471932344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471932343}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e848b1f022e07244a8d0dd71c1978d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 285217756}
+  rightDoor: {fileID: 350039379}
+  leftOpenRotation: {x: 0, y: -90, z: 0}
+  rightOpenRotation: {x: 0, y: 90, z: 0}
+  rotationSpeed: 2
 --- !u!1001 &510310924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2226,6 +2298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cabinet (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4484106957331255840, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.28
@@ -2271,6 +2347,29 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+--- !u!1 &1510354015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 283652633039661350, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+  m_PrefabInstance: {fileID: 471932342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1510354017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510354015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 176125423}
+  interactDistance: 3
+  openAngle: 90
+  speed: 2
+  interactKey: 101
+  promptText: {fileID: 599828458}
 --- !u!4 &1590509173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6556307555316582679, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
@@ -2441,6 +2540,10 @@ PrefabInstance:
     - target: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
       propertyPath: m_Name
       value: cabinet (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4484106957331255840, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3102,6 +3205,10 @@ PrefabInstance:
     - target: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
       propertyPath: m_Name
       value: cabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018336523720173978, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4484106957331255840, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
       propertyPath: m_LocalPosition.x
