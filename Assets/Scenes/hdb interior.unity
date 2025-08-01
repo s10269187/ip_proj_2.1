@@ -483,6 +483,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &267210395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4508609056200040058, guid: e3ecda4c76053b34486032527f3bfa89, type: 3}
+  m_PrefabInstance: {fileID: 1026687098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &267210398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267210395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbf20f85832a7d449b416b07848afa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cabinetPart: {fileID: 1899491564}
+  localOffset: {x: 0.2, y: 0, z: 0}
 --- !u!1001 &277365145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1705,7 +1724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5262392071618702001, guid: e3ecda4c76053b34486032527f3bfa89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2154
+      value: 0.194
       objectReference: {fileID: 0}
     - target: {fileID: 5262392071618702001, guid: e3ecda4c76053b34486032527f3bfa89, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1739,10 +1758,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7091470270770366243, guid: e3ecda4c76053b34486032527f3bfa89, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4508609056200040058, guid: e3ecda4c76053b34486032527f3bfa89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 267210398}
     - targetCorrespondingSourceObject: {fileID: 4132547355597524309, guid: e3ecda4c76053b34486032527f3bfa89, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1598414976}
@@ -2697,6 +2723,11 @@ MonoBehaviour:
   slideOffset: {x: 0, y: 0, z: -0.7}
   slideSpeed: 2
   promptText: {fileID: 599828458}
+--- !u!4 &1899491564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5856394542617646078, guid: 6a6612ad462760b44964396c9e779d20, type: 3}
+  m_PrefabInstance: {fileID: 1419952730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1918114091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
