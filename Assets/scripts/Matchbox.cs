@@ -2,11 +2,27 @@ using UnityEngine;
 
 public class Matchbox : MonoBehaviour
 {
-    public Transform cabinetPart; // The moving door or drawer
-    public Vector3 localOffset = new Vector3(0.2f, 0f, 0f); // Offset from the cabinet part
+    [Header("Held Positioning")]
+    public Transform handAnchor;
+    public Vector3 heldLocalPosition = Vector3.zero;
+    public Vector3 heldLocalRotation = Vector3.zero;
 
-    void Update()
+    private void Start()
     {
-        transform.position = cabinetPart.TransformPoint(localOffset);
+        // Attach matchbox to hand and apply initial transform
+        transform.SetParent(handAnchor);
+        ApplyHeldTransform();
+    }
+
+    private void Update()
+    {
+        // Continuously apply position and rotation in case values are changed in Inspector
+        ApplyHeldTransform();
+    }
+
+    private void ApplyHeldTransform()
+    {
+        transform.localPosition = heldLocalPosition;
+        transform.localRotation = Quaternion.Euler(heldLocalRotation);
     }
 }
