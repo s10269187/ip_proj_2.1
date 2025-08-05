@@ -210,7 +210,6 @@ GameObject:
   - component: {fileID: 5393253759034437863}
   - component: {fileID: 7127987410179120602}
   - component: {fileID: 1854477555132592463}
-  - component: {fileID: 6824016236866814685}
   m_Layer: 0
   m_Name: l_door
   m_TagString: Door
@@ -308,29 +307,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7129206644746979359, guid: 18ddca631bb52454f986430965a47230, type: 3}
---- !u!114 &6824016236866814685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3330410830865584102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e848b1f022e07244a8d0dd71c1978d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocked: 0
-  isOpen: 0
-  doorOpening: 0
-  doorClosing: 0
-  doorOpenSpeed: 20
-  doorOpenAngle: 90
-  doorSlideDistance: 0
-  count: 0
-  doorPair: {fileID: 1013986756275769583}
-  closeDistance: 20
-  slidingDoor: 0
 --- !u!1 &6019633247281378749
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +319,6 @@ GameObject:
   - component: {fileID: 4885357078206316422}
   - component: {fileID: 3071083848642271891}
   - component: {fileID: 566520215184705474}
-  - component: {fileID: 1013986756275769583}
   m_Layer: 0
   m_Name: r_door
   m_TagString: Door
@@ -441,26 +416,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2407808408409321381, guid: 18ddca631bb52454f986430965a47230, type: 3}
---- !u!114 &1013986756275769583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6019633247281378749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e848b1f022e07244a8d0dd71c1978d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocked: 0
-  isOpen: 0
-  doorOpening: 0
-  doorClosing: 0
-  doorOpenSpeed: 20
-  doorOpenAngle: 90
-  doorSlideDistance: 0
-  count: 0
-  doorPair: {fileID: 6824016236866814685}
-  closeDistance: 20
-  slidingDoor: 0

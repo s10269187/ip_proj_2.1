@@ -15,7 +15,16 @@ public class PlaceAndTransferMaterial : MonoBehaviour
     {
         if (isHolding && Input.GetKeyDown(placeKey))
         {
-            PlaceObject();
+            if (heldObject != null)
+            {
+                heldObject = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PickUp>().heldObj;
+                if (heldObject.name == gameObject.name)
+                {
+                PlaceObject();
+                }
+            }
+            
+            
         }
     }
 

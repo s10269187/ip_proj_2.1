@@ -13,7 +13,7 @@ public class PickUp : MonoBehaviour
     public Vector3 heldLocalPosition = Vector3.zero;
     public Vector3 heldLocalRotation = Vector3.zero;
 
-    private GameObject heldObj;
+    public GameObject heldObj;
     private Rigidbody heldObjRb;
     private bool canDrop = true;
     private int LayerNumber;
