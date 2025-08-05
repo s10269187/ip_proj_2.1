@@ -1,108 +1,42 @@
 using UnityEngine;
 
-public class PlaceItems : MonoBehaviour
+public class PlaceAndTransferMaterial : MonoBehaviour
 {
-    public GameObject placeholder; // Assign in Inspector
-    public GameObject actualItem;  // Assign in Inspector
+    [Header("Held Object Settings")]
+    public GameObject heldObject; // The object currently in hand
 
-    private bool itemPlaced = false;
+    [Header("Target Settings")]
+    public GameObject targetObject; // The object to receive the material
+    public KeyCode placeKey = KeyCode.R;
 
-    void Start()
-    {
-        // Show placeholder, hide actual item at start
-        placeholder.SetActive(true);
-        actualItem.SetActive(false);
-
-        // Make placeholder translucent and non-interactable
-        SetTranslucent(placeholder, 0.3f);
-        SetNonInteractable(placeholder);
-    }
+    private bool isHolding = true;
 
     void Update()
     {
-        // Press R to place the item
-        if (Input.GetKeyDown(KeyCode.R))
+        if (isHolding && Input.GetKeyDown(placeKey))
         {
-            PlaceItem();
+            PlaceObject();
         }
     }
 
-    // Call this method when the player places the item
-    public void PlaceItem()
+    void PlaceObject()
     {
-        if (!itemPlaced)
+        if (heldObject == null || targetObject == null) return;
+
+        Renderer heldRenderer = heldObject.GetComponent<Renderer>();
+        Renderer targetRenderer = targetObject.GetComponent<Renderer>();
+
+        if (heldRenderer != null && targetRenderer != null)
         {
-            placeholder.SetActive(false);
-            actualItem.SetActive(true);
-            itemPlaced = true;
-
-            // Make actual item fully opaque and interactable
-            SetOpaque(actualItem);
-            SetInteractable(actualItem);
+            // Clone the material to avoid shared reference issues
+            Material newMat = new Material(heldRenderer.material);
+            targetRenderer.material = newMat;
         }
-    }
 
-    // Utility to set transparency
-    void SetTranslucent(GameObject obj, float alpha)
-    {
-        var renderer = obj.GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            // Clone material to avoid affecting other objects
-            renderer.material = new Material(renderer.material);
+        // Destroy the held object
+        Destroy(heldObject);
+        isHolding = false;
 
-            Color color = renderer.material.color;
-            color.a = alpha;
-            renderer.material.color = color;
-
-            renderer.material.SetFloat("_Mode", 2); // Fade mode
-            renderer.material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-            renderer.material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-            renderer.material.SetInt("_ZWrite", 0);
-            renderer.material.DisableKeyword("_ALPHATEST_ON");
-            renderer.material.EnableKeyword("_ALPHABLEND_ON");
-            renderer.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-            renderer.material.renderQueue = 3000;
-        }
-    }
-
-    // Utility to make non-interactable
-    void SetNonInteractable(GameObject obj)
-    {
-        Collider col = obj.GetComponent<Collider>();
-        if (col != null)
-            col.isTrigger = true;
-    }
-
-    // Utility to set full opacity
-    void SetOpaque(GameObject obj)
-    {
-        var renderer = obj.GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            // Clone material to avoid affecting other objects
-            renderer.material = new Material(renderer.material);
-
-            Color color = renderer.material.color;
-            color.a = 1f;
-            renderer.material.color = color;
-
-            renderer.material.SetFloat("_Mode", 0); // Opaque mode
-            renderer.material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
-            renderer.material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
-            renderer.material.SetInt("_ZWrite", 1);
-            renderer.material.DisableKeyword("_ALPHATEST_ON");
-            renderer.material.DisableKeyword("_ALPHABLEND_ON");
-            renderer.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-            renderer.material.renderQueue = -1;
-        }
-    }
-
-    // Utility to make interactable
-    void SetInteractable(GameObject obj)
-    {
-        Collider col = obj.GetComponent<Collider>();
-        if (col != null)
-            col.isTrigger = false;
+        Debug.Log("Object placed and material transferred.");
     }
 }
