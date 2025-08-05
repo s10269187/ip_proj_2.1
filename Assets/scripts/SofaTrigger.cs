@@ -32,6 +32,7 @@ public class SofaTrigger : MonoBehaviour
             }
         }
     }
+    
 
     void OnTriggerEnter(Collider other)
     {
