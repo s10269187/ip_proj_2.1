@@ -2,19 +2,27 @@ using UnityEngine;
 
 public class PlaceAndTransferMaterial : MonoBehaviour
 {
-
     [SerializeField]
     Material newMat;
 
-
     [Header("Target Settings")]
     public GameObject targetObject; // The object to receive the material
+
+    [Header("Allowed Item")]
+    [SerializeField] private GameObject allowedItem; // Assign the only item that can transfer material
 
     public void PlaceObject(GameObject heldObject)
     {
         if (heldObject == null || targetObject == null)
         {
             Debug.LogWarning("Held or target object is null.");
+            return;
+        }
+
+        // Only allow the assigned item to transfer material and be destroyed
+        if (heldObject != allowedItem)
+        {
+            Debug.Log("This item is not allowed to transfer material.");
             return;
         }
 
@@ -31,7 +39,7 @@ public class PlaceAndTransferMaterial : MonoBehaviour
             Debug.LogWarning("Missing Renderer on held or target object.");
         }
 
-        // Drop and destroy the held object
+        // Drop and destroy the allowed item
         PickUp pickUp = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PickUp>();
         if (pickUp != null)
         {
@@ -39,6 +47,6 @@ public class PlaceAndTransferMaterial : MonoBehaviour
         }
 
         Destroy(heldObject);
-        Debug.Log("Held object destroyed.");
+        Debug.Log("Allowed item destroyed.");
     }
 }
