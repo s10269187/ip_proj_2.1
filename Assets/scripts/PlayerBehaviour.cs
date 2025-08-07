@@ -1,79 +1,80 @@
 using UnityEngine;
 using TMPro;
-
 public class PlayerBehaviour : MonoBehaviour
-{
-    [SerializeField]
-    Transform spawnPoint;
-    bool canInteract = false;
-
-    [Header("UI Settings")]
-    public TextMeshProUGUI promptText;
-
-    private BedroomDoor currentDoor;
-    public KeyCode interactKey = KeyCode.E;
-    public Camera playerCamera;
-    public float interactDistance = 3f;
-
-    private Camera cam;
-
-    void Start()
     {
-        cam = Camera.main;
-        if (promptText != null)
-            promptText.text = "";
-        Debug.Log("PlayerBehaviour started. Camera assigned.");
-    }
+        [SerializeField] Transform spawnPoint;
 
-    void Update()
-    {
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        RaycastHit hit;
+        [Header("UI Settings")]
+        public TextMeshProUGUI promptText;
 
-        if (Physics.Raycast(ray, out hit, interactDistance))
+        private DoorBehaviour currentDoor;
+        public KeyCode interactKey = KeyCode.E;
+        public Camera playerCamera;
+        public float interactDistance = 3f;
+
+        private PickUp pickUpScript;
+
+        void Start()
         {
-            Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
+            pickUpScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PickUp>();
+            if (promptText != null)
+                promptText.text = "";
+            Debug.Log("PlayerBehaviour started. Camera assigned.");
+        }
 
-            // Check if the hit object has the tag "Door"
-            if (hit.collider.CompareTag("Door"))
+        void Update()
+        {
+            Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, interactDistance))
             {
-                Debug.Log("Object with tag 'Door' detected: " + hit.collider.gameObject.name);
-                if (promptText != null)
+                GameObject hitObject = hit.collider.gameObject;
+                Debug.Log("Raycast hit: " + hitObject.name);
+
+                if (hitObject.CompareTag("Door"))
                 {
                     promptText.enabled = true;
-                    promptText.text = "Press E to Open/lose the door";
+                    promptText.text = "Press E to Open/Close the door";
+                    currentDoor = hitObject.GetComponent<DoorBehaviour>();
+
+                    if (Input.GetKeyDown(interactKey) && currentDoor != null)
+                    {
+                        currentDoor.ToggleDoor();
+                    }
                 }
-
-                // Try to get BedroomDoor component (optional, for actual door logic)
-                BedroomDoor door = hit.collider.GetComponent<BedroomDoor>();
-                currentDoor = door;
-
-                if (Input.GetKeyDown(interactKey) && door != null)
+                else if (hitObject.CompareTag("Placeable"))
                 {
-                    Debug.Log("Interact key pressed. Toggling door: " + door.gameObject.name);
-                    door.ToggleDoor();
+                    promptText.enabled = true;
+                    promptText.text = "Press Q to Place item";
+
+                    PlaceAndTransferMaterial placeScript = hitObject.GetComponent<PlaceAndTransferMaterial>();
+
+                    if (Input.GetKeyDown(KeyCode.Q) && placeScript != null && pickUpScript.heldObj != null)
+                    {   
+                        Debug.Log("heldObj: " + pickUpScript.heldObj);
+                        placeScript.PlaceObject(pickUpScript.heldObj);
+                    }
+                }
+                else
+                {
+                    ClearPrompt();
                 }
             }
             else
             {
-                Debug.Log("Hit object is not tagged 'Door': " + hit.collider.gameObject.name);
                 ClearPrompt();
             }
         }
-        else
-        {
-            Debug.Log("Raycast did not hit anything.");
-            ClearPrompt();
-        }
-    }
 
-    void ClearPrompt()
-    {
-        if (promptText != null)
+        void ClearPrompt()
         {
-            promptText.enabled = false;
-            promptText.text = "";
+            if (promptText != null)
+            {
+                promptText.enabled = false;
+                promptText.text = "";
+            }
+
+            currentDoor = null;
         }
-        currentDoor = null;
     }
-}

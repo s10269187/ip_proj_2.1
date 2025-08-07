@@ -60,7 +60,7 @@ public class PickUp : MonoBehaviour
         }
     }
 
-    void PickUpObject(GameObject pickUpObj)
+        void PickUpObject(GameObject pickUpObj)
     {
         if (pickUpObj.GetComponent<Rigidbody>())
         {
@@ -72,8 +72,15 @@ public class PickUp : MonoBehaviour
             heldObj.transform.localPosition = heldLocalPosition;
             heldObj.transform.localRotation = Quaternion.Euler(heldLocalRotation);
 
-            heldObj.layer = LayerNumber;
+            // Set to Ignore Raycast layer
+            heldObj.layer = LayerMask.NameToLayer("Ignore Raycast");
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+
+            Debug.Log("Picked up: " + heldObj.name + " and set to Ignore Raycast layer.");
+        }
+        else
+        {
+            Debug.LogWarning("Tried to pick up object without Rigidbody: " + pickUpObj.name);
         }
     }
 
@@ -112,4 +119,18 @@ public class PickUp : MonoBehaviour
             heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f);
         }
     }
+
+    public void ForceDropHeldObject()
+    {
+        if (heldObj != null)
+        {
+            Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+            heldObj.layer = 0;
+            heldObjRb.isKinematic = false;
+            heldObj.transform.parent = null;
+            heldObj = null;
+            heldObjRb = null;
+        }
+    }
+
 }
