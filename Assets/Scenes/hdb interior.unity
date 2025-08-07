@@ -4397,6 +4397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
   promptText: {fileID: 599828458}
+  taskText: {fileID: 1676728098}
   interactKey: 101
   playerCamera: {fileID: 1885054897}
   interactDistance: 3
@@ -28794,8 +28795,8 @@ Transform:
   m_GameObject: {fileID: 1679662384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.41534, y: 3.1293702, z: -14.015045}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 14.7, y: 3.1293702, z: -14.015045}
+  m_LocalScale: {x: 0.67296, y: 0.67296, z: 0.67296}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

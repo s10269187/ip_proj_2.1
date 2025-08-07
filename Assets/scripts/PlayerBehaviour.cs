@@ -7,6 +7,9 @@ public class PlayerBehaviour : MonoBehaviour
         [Header("UI Settings")]
         public TextMeshProUGUI promptText;
 
+        [Header("Task UI")]
+        public TextMeshProUGUI taskText;
+
         private DoorBehaviour currentDoor;
         public KeyCode interactKey = KeyCode.E;
         public Camera playerCamera;
@@ -27,44 +30,64 @@ public class PlayerBehaviour : MonoBehaviour
             Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, interactDistance))
+        if (Physics.Raycast(ray, out hit, interactDistance))
+        {
+            GameObject hitObject = hit.collider.gameObject;
+            Debug.Log("Raycast hit: " + hitObject.name);
+
+            if (hitObject.CompareTag("Door"))
             {
-                GameObject hitObject = hit.collider.gameObject;
-                Debug.Log("Raycast hit: " + hitObject.name);
+                promptText.enabled = true;
+                promptText.text = "Press E to Open/Close the door";
+                currentDoor = hitObject.GetComponent<DoorBehaviour>();
 
-                if (hitObject.CompareTag("Door"))
+                if (Input.GetKeyDown(interactKey) && currentDoor != null)
                 {
-                    promptText.enabled = true;
-                    promptText.text = "Press E to Open/Close the door";
-                    currentDoor = hitObject.GetComponent<DoorBehaviour>();
-
-                    if (Input.GetKeyDown(interactKey) && currentDoor != null)
-                    {
-                        currentDoor.ToggleDoor();
-                    }
+                    currentDoor.ToggleDoor();
                 }
-                else if (hitObject.CompareTag("Placeable"))
-                {
-                    promptText.enabled = true;
-                    promptText.text = "Press Q to Place item";
+            }
+            else if (hitObject.CompareTag("Placeable"))
+            {
+                promptText.enabled = true;
+                promptText.text = "Press Q to Place item";
 
-                    PlaceAndTransferMaterial placeScript = hitObject.GetComponent<PlaceAndTransferMaterial>();
+                PlaceAndTransferMaterial placeScript = hitObject.GetComponent<PlaceAndTransferMaterial>();
 
-                    if (Input.GetKeyDown(KeyCode.Q) && placeScript != null && pickUpScript.heldObj != null)
-                    {   
-                        Debug.Log("heldObj: " + pickUpScript.heldObj);
-                        placeScript.PlaceObject(pickUpScript.heldObj);
-                    }
-                }
-                else
+                if (Input.GetKeyDown(KeyCode.Q) && placeScript != null && pickUpScript.heldObj != null)
                 {
-                    ClearPrompt();
+                    Debug.Log("heldObj: " + pickUpScript.heldObj);
+                    placeScript.PlaceObject(pickUpScript.heldObj);
                 }
             }
             else
             {
                 ClearPrompt();
             }
+                
+            if (hitObject.name == "hdb1")
+        {
+            if (taskText != null)
+            {
+                taskText.enabled = true;
+                taskText.text = "Task: Interact with the HDB box!";
+            }
+        }
+        else
+        {
+            if (taskText != null)
+            {
+                taskText.enabled = false;
+                taskText.text = "";
+            }
+        }
+
+            }
+        else
+        {
+            ClearPrompt();
+        }
+            
+            
         }
 
         void ClearPrompt()
