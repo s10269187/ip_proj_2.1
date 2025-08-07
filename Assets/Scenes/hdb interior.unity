@@ -257,12 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &27478834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,24 +4081,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
   m_PrefabInstance: {fileID: 2046059474}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &135568251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135568249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ab7f615da394fd428512929186afe97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
-  openAngle: 90
-  speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!65 &135568252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4122,8 +4100,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 175.87802, y: 331.94302, z: 33.79725}
+  m_Center: {x: -87.02353, y: 165.4714, z: 9.647615}
+--- !u!114 &135568254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135568249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  speed: 2
 --- !u!1 &143570565
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,7 +4300,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
-  interactionDistance: 5
+  promptText: {fileID: 599828458}
+  interactKey: 101
+  playerCamera: {fileID: 1885054897}
+  interactDistance: 3
 --- !u!4 &176125423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 937451010987979973, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
@@ -5373,7 +5368,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
   m_PrefabInstance: {fileID: 1221617251}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &263724364
+--- !u!114 &263724369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5382,15 +5377,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 263724359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c75389f64900442b32f2011a106c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &267210395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4508609056200040058, guid: e3ecda4c76053b34486032527f3bfa89, type: 3}
@@ -5686,12 +5677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &297073662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6508,12 +6495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1001 &359928102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6837,12 +6820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7130,21 +7109,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2279040229102746793, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 460938037}
+      addedObject: {fileID: 460938041}
   m_SourcePrefab: {fileID: 100100000, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
 --- !u!1 &460938031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
   m_PrefabInstance: {fileID: 460938030}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &460938037
+--- !u!114 &460938041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7153,15 +7131,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 460938031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c75389f64900442b32f2011a106c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1001 &469089558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7329,12 +7303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!114 &469089566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7347,12 +7317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!114 &469089567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7365,12 +7331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &471932342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7854,12 +7816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!114 &511876581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7872,12 +7830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!114 &511876582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7890,12 +7844,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &535926634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8272,7 +8222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8421121785359890418, guid: 71cd97772c2f86f42b0b7af15487dca4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.776802
+      value: -13.92
       objectReference: {fileID: 0}
     - target: {fileID: 8421121785359890418, guid: 71cd97772c2f86f42b0b7af15487dca4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8477,12 +8427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!114 &568140443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8495,12 +8441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!114 &568140444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8513,12 +8455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &569585166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8686,12 +8624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!114 &569585174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8704,12 +8638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!114 &569585175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8722,12 +8652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &572380305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9056,21 +8982,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2279040229102746793, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 635442352}
+      addedObject: {fileID: 635442356}
   m_SourcePrefab: {fileID: 100100000, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
 --- !u!1 &635442351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
   m_PrefabInstance: {fileID: 635442350}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &635442352
+--- !u!114 &635442356
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9079,15 +9004,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 635442351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c75389f64900442b32f2011a106c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &642506045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6308182268936927134, guid: e1327bf9d7e1ec34582bb34109433cf3, type: 3}
@@ -9602,13 +9523,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1611039682744033229, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 704502701}
+    - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 704502703}
   m_SourcePrefab: {fileID: 100100000, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
 --- !u!1 &704502700 stripped
 GameObject:
@@ -9627,12 +9552,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 120
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
+--- !u!65 &704502703
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704502700}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 178.68904, y: 334.9965, z: 69.87189}
+  m_Center: {x: -85.349, y: 166.99823, z: 10.626322}
 --- !u!1001 &719721037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16575,12 +16517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &839872270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18007,16 +17945,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1611039682744033229, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1104474879}
+      addedObject: {fileID: 1104474878}
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1104474878}
+      addedObject: {fileID: 1104474881}
   m_SourcePrefab: {fileID: 100100000, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
 --- !u!1 &1104474877 stripped
 GameObject:
@@ -18042,9 +17981,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1104474879
+  m_Size: {x: 181.74728, y: 332.48187, z: 29.092693}
+  m_Center: {x: -86.68833, y: 165.74094, z: 11.79625}
+--- !u!114 &1104474881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18053,15 +17992,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1104474877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ab7f615da394fd428512929186afe97, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &1110659005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4279772562289980687, guid: c3a1d69d2b5b2c1489cd23e1a6c9c1ef, type: 3}
@@ -24755,7 +24690,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
   m_PrefabInstance: {fileID: 1276303488}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1162923470
+--- !u!114 &1162923475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24764,15 +24699,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1162923465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c75389f64900442b32f2011a106c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &1166126702
 GameObject:
   m_ObjectHideFlags: 0
@@ -25016,14 +24947,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1186257298}
+      addedObject: {fileID: 1186257303}
   m_SourcePrefab: {fileID: 100100000, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
 --- !u!1 &1186257292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
   m_PrefabInstance: {fileID: 1186257291}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1186257298
+--- !u!114 &1186257303
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25032,15 +24963,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186257292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c75389f64900442b32f2011a106c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &1200578803
 GameObject:
   m_ObjectHideFlags: 0
@@ -25284,7 +25211,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 263724364}
+      addedObject: {fileID: 263724369}
   m_SourcePrefab: {fileID: 100100000, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
 --- !u!1 &1229146155
 GameObject:
@@ -25778,7 +25705,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1162923470}
+      addedObject: {fileID: 1162923475}
   m_SourcePrefab: {fileID: 100100000, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
 --- !u!1 &1280422789 stripped
 GameObject:
@@ -25802,12 +25729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &1287289052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27891,7 +27814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8421121785359890418, guid: 71cd97772c2f86f42b0b7af15487dca4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.566803
+      value: -31.710001
       objectReference: {fileID: 0}
     - target: {fileID: 8421121785359890418, guid: 71cd97772c2f86f42b0b7af15487dca4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28080,12 +28003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &1587926374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6019633247281378749, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
@@ -28108,12 +28027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!4 &1590509173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6556307555316582679, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
@@ -29593,16 +29508,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1611039682744033229, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1790606676}
+      addedObject: {fileID: 1790606675}
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1790606675}
+      addedObject: {fileID: 1790606678}
   m_SourcePrefab: {fileID: 100100000, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
 --- !u!1 &1790606674 stripped
 GameObject:
@@ -29628,9 +29544,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1790606676
+  m_Size: {x: 184.07692, y: 342.10843, z: 46.398926}
+  m_Center: {x: -85.62405, y: 170.55421, z: 9.87165}
+--- !u!114 &1790606678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29639,15 +29555,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1790606674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ab7f615da394fd428512929186afe97, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1001 &1794163086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29763,14 +29675,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1802899825}
+      addedObject: {fileID: 1802899830}
   m_SourcePrefab: {fileID: 100100000, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
 --- !u!1 &1802899824 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4794164476028214864, guid: dc23eb9d79d61174ebb785db84929276, type: 3}
   m_PrefabInstance: {fileID: 1802899823}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1802899825
+--- !u!114 &1802899830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29779,15 +29691,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1802899824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c75389f64900442b32f2011a106c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!1 &1804539488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6019633247281378749, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
@@ -29805,12 +29713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &1829733735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33498,6 +33402,11 @@ MonoBehaviour:
   heldLocalPosition: {x: 0, y: 1, z: 0}
   heldLocalRotation: {x: 0, y: 0, z: 0}
   heldObj: {fileID: 0}
+--- !u!20 &1885054897 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5126527961139664767, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
+  m_PrefabInstance: {fileID: 839872270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1891330799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33811,12 +33720,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 120
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
+--- !u!65 &1918114095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918114091}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 178.84691, y: 332.3743, z: 47.502983}
+  m_Center: {x: -82.56931, y: 163.1234, z: 9.7132015}
 --- !u!1001 &1932799988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33873,13 +33799,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1611039682744033229, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1932799990}
+    - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1932799992}
   m_SourcePrefab: {fileID: 100100000, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
 --- !u!1 &1932799989 stripped
 GameObject:
@@ -33898,12 +33828,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 1.5
   openAngle: 120
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
+--- !u!65 &1932799992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932799989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 197.20647, y: 332.57947, z: 36.31975}
+  m_Center: {x: -80.16458, y: 165.78967, z: 6.767461}
 --- !u!1001 &1935941953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34071,12 +34018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!114 &1935941961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34089,12 +34032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!114 &1935941962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34107,12 +34046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &1939911347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34638,12 +34573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 599828458}
 --- !u!114 &1974567084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34656,12 +34587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: 135
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!114 &1974567085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34674,12 +34601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d40d738bfde9a44094bb253ce68bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 176125423}
-  interactDistance: 3
   openAngle: -90
   speed: 2
-  interactKey: 101
-  promptText: {fileID: 0}
 --- !u!1001 &2010013952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35050,16 +34973,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1611039682744033229, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 135568251}
+      addedObject: {fileID: 135568252}
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 135568252}
+      addedObject: {fileID: 135568254}
   m_SourcePrefab: {fileID: 100100000, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
 --- !u!1001 &2050132045
 PrefabInstance:
@@ -35409,13 +35333,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1611039682744033229, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1918114093}
+    - targetCorrespondingSourceObject: {fileID: 4153033723861646894, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1918114095}
   m_SourcePrefab: {fileID: 100100000, guid: 541e6001ecacc3244a0cfdb46945d30b, type: 3}
 --- !u!1 &2092934738
 GameObject:
@@ -35992,7 +35920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8421121785359890418, guid: 71cd97772c2f86f42b0b7af15487dca4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.776802
+      value: -13.92
       objectReference: {fileID: 0}
     - target: {fileID: 8421121785359890418, guid: 71cd97772c2f86f42b0b7af15487dca4, type: 3}
       propertyPath: m_LocalRotation.w
