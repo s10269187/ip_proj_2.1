@@ -30,74 +30,76 @@ public class PlayerBehaviour : MonoBehaviour
             Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
             RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, interactDistance))
-        {
-            GameObject hitObject = hit.collider.gameObject;
-            Debug.Log("Raycast hit: " + hitObject.name);
-
-            if (hitObject.CompareTag("Door"))
+            if (Physics.Raycast(ray, out hit, interactDistance))
             {
-                promptText.enabled = true;
-                promptText.text = "Press E to Open/Close the door";
-                currentDoor = hitObject.GetComponent<DoorBehaviour>();
+                GameObject hitObject = hit.collider.gameObject;
+                Debug.Log("Raycast hit: " + hitObject.name);
 
-                if (Input.GetKeyDown(interactKey) && currentDoor != null)
+                if (hitObject.CompareTag("Door"))
                 {
-                    currentDoor.ToggleDoor();
+                    promptText.enabled = true;
+                    promptText.text = "Press E to Open/Close the door";
+                    currentDoor = hitObject.GetComponent<DoorBehaviour>();
+
+                    if (Input.GetKeyDown(interactKey) && currentDoor != null)
+                    {
+                        currentDoor.ToggleDoor();
+                    }
                 }
-            }
-            else if (hitObject.CompareTag("Placeable"))
-            {
-                promptText.enabled = true;
-                promptText.text = "Press Q to Place item";
-
-                PlaceAndTransferMaterial placeScript = hitObject.GetComponent<PlaceAndTransferMaterial>();
-
-                if (Input.GetKeyDown(KeyCode.Q) && placeScript != null && pickUpScript.heldObj != null)
+                else if (hitObject.CompareTag("Placeable"))
                 {
-                    Debug.Log("heldObj: " + pickUpScript.heldObj);
-                    placeScript.PlaceObject(pickUpScript.heldObj);
+                    promptText.enabled = true;
+                    promptText.text = "Press Q to Place item";
+
+                    PlaceAndTransferMaterial placeScript = hitObject.GetComponent<PlaceAndTransferMaterial>();
+
+                    if (Input.GetKeyDown(KeyCode.Q) && placeScript != null && pickUpScript.heldObj != null)
+                    {   
+                        Debug.Log("heldObj: " + pickUpScript.heldObj);
+                        placeScript.PlaceObject(pickUpScript.heldObj);
+                    }
                 }
+                else
+                {
+                    ClearPrompt();
+                }
+                 
             }
+            
             else
             {
                 ClearPrompt();
             }
-                
-            if (hitObject.name == "hdb1")
+            
+            
+        }
+
+        void OnTriggerEnter(Collider other)
         {
-            if (taskText != null)
+            if (other.gameObject.name == "hdb1" && taskText != null)
             {
                 taskText.enabled = true;
                 taskText.text = "Task: Interact with the HDB box!";
             }
         }
-        else
+
+        void OnTriggerExit(Collider other)
         {
-            if (taskText != null)
+            if (other.gameObject.name == "hdb1" && taskText != null)
             {
                 taskText.enabled = false;
                 taskText.text = "";
             }
         }
 
-            }
-        else
-        {
-            ClearPrompt();
-        }
-            
-            
-        }
-
         void ClearPrompt()
-        {
-            if (promptText != null)
             {
-                promptText.enabled = false;
-                promptText.text = "";
-            }
+                if (promptText != null)
+                {
+                    promptText.enabled = false;
+                    promptText.text = "";
+                }
 
-            currentDoor = null;
-        }
-    }
+                currentDoor = null;
+            }
+}
