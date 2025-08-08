@@ -9,6 +9,8 @@ TagManager:
   - canPickUp
   - Placeable
   - HDB1
+  - HDB2
+  - HDB3
   layers:
   - Default
   - TransparentFX
