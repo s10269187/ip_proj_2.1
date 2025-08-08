@@ -8,6 +8,7 @@ TagManager:
   - Door
   - canPickUp
   - Placeable
+  - HDB1
   layers:
   - Default
   - TransparentFX

@@ -7,9 +7,6 @@ public class PlayerBehaviour : MonoBehaviour
         [Header("UI Settings")]
         public TextMeshProUGUI promptText;
 
-        [Header("Task UI")]
-        public TextMeshProUGUI taskText;
-
         private DoorBehaviour currentDoor;
         public KeyCode interactKey = KeyCode.E;
         public Camera playerCamera;
@@ -38,7 +35,7 @@ public class PlayerBehaviour : MonoBehaviour
                 if (hitObject.CompareTag("Door"))
                 {
                     promptText.enabled = true;
-                    promptText.text = "Press E to Open/Close the door";
+                    promptText.text = "Press E to Interact";
                     currentDoor = hitObject.GetComponent<DoorBehaviour>();
 
                     if (Input.GetKeyDown(interactKey) && currentDoor != null)
@@ -72,24 +69,6 @@ public class PlayerBehaviour : MonoBehaviour
             }
             
             
-        }
-
-        void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.name == "hdb1" && taskText != null)
-            {
-                taskText.enabled = true;
-                taskText.text = "Task: Interact with the HDB box!";
-            }
-        }
-
-        void OnTriggerExit(Collider other)
-        {
-            if (other.gameObject.name == "hdb1" && taskText != null)
-            {
-                taskText.enabled = false;
-                taskText.text = "";
-            }
         }
 
         void ClearPrompt()

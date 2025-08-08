@@ -1,15 +1,18 @@
 using UnityEngine;
+using TMPro;
 
 public class PlaceAndTransferMaterial : MonoBehaviour
 {
-    [SerializeField]
-    Material newMat;
+    [SerializeField] Material newMat;
 
     [Header("Target Settings")]
-    public GameObject targetObject; // The object to receive the material
+    public GameObject targetObject;
 
     [Header("Allowed Item")]
-    [SerializeField] private GameObject allowedItem; // Assign the only item that can transfer material
+    [SerializeField] private GameObject allowedItem;
+
+    [Header("Task UI")]
+    public TextMeshProUGUI taskToStrike; // Assign in Inspector
 
     public void PlaceObject(GameObject heldObject)
     {
@@ -19,7 +22,6 @@ public class PlaceAndTransferMaterial : MonoBehaviour
             return;
         }
 
-        // Only allow the assigned item to transfer material and be destroyed
         if (heldObject != allowedItem)
         {
             Debug.Log("This item is not allowed to transfer material.");
@@ -39,14 +41,20 @@ public class PlaceAndTransferMaterial : MonoBehaviour
             Debug.LogWarning("Missing Renderer on held or target object.");
         }
 
-        // Drop and destroy the allowed item
         PickUp pickUp = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PickUp>();
         if (pickUp != null)
         {
-            pickUp.ForceDropHeldObject(); // Unparent and clear reference
+            pickUp.ForceDropHeldObject();
         }
 
         Destroy(heldObject);
         Debug.Log("Allowed item destroyed.");
+
+        // ✅ Strike through the task
+        if (taskToStrike != null)
+        {
+            taskToStrike.text = $"<s>{taskToStrike.text}</s>";
+            taskToStrike.color = Color.gray; // Optional: dim the text
+        }
     }
 }
