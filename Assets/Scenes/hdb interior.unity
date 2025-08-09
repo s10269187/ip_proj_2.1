@@ -9222,7 +9222,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 44cc85a9ff84c114e8d140e7bff9ec78, type: 2}
     - target: {fileID: 8102314993112396361, guid: 497572d03ee008449a1244ec7b0d6e22, type: 3}
       propertyPath: m_Name
-      value: bathroom (3)
+      value: HDBlava
       objectReference: {fileID: 0}
     - target: {fileID: 8102314993112396361, guid: 497572d03ee008449a1244ec7b0d6e22, type: 3}
       propertyPath: m_TagString
@@ -12354,13 +12354,42 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 44cc85a9ff84c114e8d140e7bff9ec78, type: 2}
     - target: {fileID: 8102314993112396361, guid: 497572d03ee008449a1244ec7b0d6e22, type: 3}
       propertyPath: m_Name
-      value: bathroom (4)
+      value: HDBenter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8102314993112396361, guid: 497572d03ee008449a1244ec7b0d6e22, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 815273310}
   m_SourcePrefab: {fileID: 100100000, guid: 497572d03ee008449a1244ec7b0d6e22, type: 3}
+--- !u!1 &815273309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8102314993112396361, guid: 497572d03ee008449a1244ec7b0d6e22, type: 3}
+  m_PrefabInstance: {fileID: 815273308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &815273310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815273309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.6958294, y: 6.7964077, z: 7.337196}
+  m_Center: {x: -1.857956, y: 2.8982038, z: 3.438865}
 --- !u!1001 &816024510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12383,7 +12412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877310416789126785, guid: c52e3571c838dfa49942b12eef148e88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.10200024
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6877310416789126785, guid: c52e3571c838dfa49942b12eef148e88, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12391,7 +12420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877310416789126785, guid: c52e3571c838dfa49942b12eef148e88, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39.649654
+      value: -39.67
       objectReference: {fileID: 0}
     - target: {fileID: 6877310416789126785, guid: c52e3571c838dfa49942b12eef148e88, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12498,7 +12527,7 @@ Cloth:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816024512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_StretchingStiffness: 1
   m_BendingStiffness: 0
   m_UseTethers: 1
@@ -15688,7 +15717,7 @@ Cloth:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816024513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_StretchingStiffness: 1
   m_BendingStiffness: 0
   m_UseTethers: 1
