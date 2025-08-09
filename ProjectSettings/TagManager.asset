@@ -14,6 +14,7 @@ TagManager:
   - Ghost
   - Cutscene
   - Lava
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
