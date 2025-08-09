@@ -13,6 +13,7 @@ TagManager:
   - HDB3
   - Ghost
   - Cutscene
+  - Lava
   layers:
   - Default
   - TransparentFX
