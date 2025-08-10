@@ -15,14 +15,17 @@ public class GhostTyping : MonoBehaviour
     {
         if (typingCoroutine != null)
         {
-            StopCoroutine(typingCoroutine);
+            CoroutineRunner.Instance.StopCoroutine(typingCoroutine);
         }
 
-        typingCoroutine = StartCoroutine(TypeText());
+        typingCoroutine = CoroutineRunner.Instance.RunCoroutine(TypeText());
     }
 
     IEnumerator TypeText()
     {
+        if (textComponent == null)
+            yield break;
+
         textComponent.text = "";
 
         foreach (char c in fullText)

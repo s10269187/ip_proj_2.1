@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using StarterAssets;
+using UnityEngine.InputSystem;
+using System.Collections;
+
 
 public class CutsceneTrigger : MonoBehaviour
 {
@@ -8,10 +11,11 @@ public class CutsceneTrigger : MonoBehaviour
     public PlayableDirector cutsceneDirector;              // Assign in Inspector
     public GhostTyping ghostTypingScript;                  // Assign in Inspector
     public FirstPersonController playerController;         // Assign in Inspector
-    public Transform teleportTarget;                       // Assign in Inspector (where to teleport)
+    public Transform teleportTarget;                       // Assign in Inspector
 
+    private PlayerInput playerInput;
+    private CharacterController characterController;
     private bool hasTriggered = false;
-    private bool waitingForMovement = false;
 
     void Start()
     {
@@ -20,9 +24,13 @@ public class CutsceneTrigger : MonoBehaviour
             cutsceneDirector.Stop();
             cutsceneDirector.time = 0;
             cutsceneDirector.enabled = false;
-
-            // Subscribe to cutscene end event
             cutsceneDirector.stopped += OnCutsceneEnded;
+        }
+
+        if (playerController != null)
+        {
+            playerInput = playerController.GetComponent<PlayerInput>();
+            characterController = playerController.GetComponent<CharacterController>();
         }
     }
 
@@ -33,38 +41,33 @@ public class CutsceneTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             hasTriggered = true;
-
-            if (playerController != null)
-            {
-                playerController.enabled = false;
-                Debug.Log("🚫 FirstPersonController disabled.");
-            }
-
-            cutsceneDirector.enabled = true;
-            cutsceneDirector.Play();
-            Debug.Log("🎬 Cutscene started after trigger.");
-
-            if (ghostTypingScript != null)
-            {
-                ghostTypingScript.StartTyping();
-                Debug.Log("👻 GhostTyping started.");
-            }
-
-            waitingForMovement = true;
+            StartCoroutine(TriggerCutsceneSequence());
         }
     }
 
-    void Update()
+    IEnumerator TriggerCutsceneSequence()
     {
-        if (waitingForMovement && Input.anyKeyDown)
+        // Disable player movement and input
+        if (playerController != null)
         {
-            if (playerController != null)
-            {
-                playerController.enabled = true;
-                Debug.Log("✅ FirstPersonController re-enabled.");
-            }
+            playerController.enabled = false;
+            if (playerInput != null) playerInput.enabled = false;
+            if (characterController != null) characterController.enabled = false;
+            Debug.Log("🚫 Player controls disabled.");
+        }
 
-            waitingForMovement = false;
+        yield return new WaitForSeconds(0.1f); // Small delay to ensure disable takes effect
+
+        // Start cutscene
+        cutsceneDirector.enabled = true;
+        cutsceneDirector.Play();
+        Debug.Log("🎬 Cutscene started.");
+
+        // Start ghost typing
+        if (ghostTypingScript != null)
+        {
+            ghostTypingScript.StartTyping();
+            Debug.Log("👻 GhostTyping started.");
         }
     }
 
@@ -76,6 +79,15 @@ public class CutsceneTrigger : MonoBehaviour
             playerController.transform.position = teleportTarget.position;
             playerController.transform.rotation = teleportTarget.rotation;
             Debug.Log("📍 Player teleported after cutscene.");
+        }
+
+        // Re-enable player controls
+        if (playerController != null)
+        {
+            playerController.enabled = true;
+            if (playerInput != null) playerInput.enabled = true;
+            if (characterController != null) characterController.enabled = true;
+            Debug.Log("✅ Player controls re-enabled after cutscene.");
         }
     }
 }
