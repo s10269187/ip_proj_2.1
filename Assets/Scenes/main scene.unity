@@ -21521,8 +21521,12 @@ PrefabInstance:
       value: straight-road (104)
       objectReference: {fileID: 0}
     - target: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.99005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 196.52234
+      value: 196.6
       objectReference: {fileID: 0}
     - target: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30027,6 +30031,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4391737130744375900, guid: 3f6a265fb8a48dc47a8a6c8cdea3b7d4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 30e51a9b4d50049439cc55e02c708661, type: 2}
     - target: {fileID: 5939117717717974971, guid: 3f6a265fb8a48dc47a8a6c8cdea3b7d4, type: 3}
       propertyPath: m_Name
       value: vinyl_on_shelf
@@ -41870,7 +41878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1200875613722008994, guid: d28b20b7acbf9a341a1bfcd58fee2a6f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.034
       objectReference: {fileID: 0}
     - target: {fileID: 1200875613722008994, guid: d28b20b7acbf9a341a1bfcd58fee2a6f, type: 3}
       propertyPath: m_LocalPosition.z
