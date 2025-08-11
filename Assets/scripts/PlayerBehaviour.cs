@@ -20,6 +20,21 @@ public class PlayerBehaviour : MonoBehaviour
             if (promptText != null)
                 promptText.text = "";
             Debug.Log("PlayerBehaviour started. Camera assigned.");
+
+            string spawnName = PlayerPrefs.GetString("SpawnPointName", "");
+
+            if (spawnName != "")
+            {
+                GameObject spawnPoint = GameObject.Find(spawnName);
+                if (spawnPoint != null)
+                {
+                    transform.position = spawnPoint.transform.position;
+                }
+
+                // Clear it so it doesn't affect future spawns
+                PlayerPrefs.DeleteKey("SpawnPointName");
+            }
+
         }
 
         void Update()
