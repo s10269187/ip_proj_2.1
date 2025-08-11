@@ -15,6 +15,9 @@ TagManager:
   - Cutscene
   - Lava
   - Checkpoint
+  - Teleport
+  - MainSceneUI
+  - TeleportEnd
   layers:
   - Default
   - TransparentFX

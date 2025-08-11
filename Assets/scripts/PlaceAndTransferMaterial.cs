@@ -42,6 +42,8 @@ public class PlaceAndTransferMaterial : MonoBehaviour
         if (fadeCanvasGroup != null)
         {
             fadeCanvasGroup.alpha = 0f;
+            fadeCanvasGroup.blocksRaycasts = false;
+            fadeCanvasGroup.interactable = false;
         }
     }
 
@@ -88,7 +90,7 @@ public class PlaceAndTransferMaterial : MonoBehaviour
         {
             cutsceneDirector.Play();
             StartCoroutine(WaitAndForceTeleport());
-            Debug.Log("🎬 Cutscene triggered after placing teapot.");
+            Debug.Log("🎬 Cutscene triggered after placing item.");
         }
     }
 
@@ -124,12 +126,30 @@ public class PlaceAndTransferMaterial : MonoBehaviour
     {
         hasTeleported = true;
 
-        yield return StartCoroutine(Fade(0f, 1f));
+        yield return StartCoroutine(Fade(0f, 1f)); // Fade to black
 
-        player.transform.SetPositionAndRotation(teleportDestination.position, teleportDestination.rotation);
-        Debug.Log("🚀 Player teleported after cutscene.");
+        TeleportPlayer(); // Actual teleport logic
 
-        yield return StartCoroutine(Fade(1f, 0f));
+        yield return StartCoroutine(Fade(1f, 0f)); // Fade back in
+    }
+
+    private void TeleportPlayer()
+    {
+        if (player == null || teleportDestination == null) return;
+
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.MovePosition(teleportDestination.position);
+            rb.MoveRotation(teleportDestination.rotation);
+            Debug.Log("🚀 Player teleported using Rigidbody.");
+        }
+        else
+        {
+            Debug.LogWarning("Player Rigidbody not found. Teleport failed.");
+        }
     }
 
     private IEnumerator Fade(float from, float to)
