@@ -5,11 +5,10 @@ using UnityEngine.AI;
 public class Chaser : MonoBehaviour
 {
     NavMeshAgent myAgent;
-    private Rigidbody rb;
-    public float movementThreshold = 0.1f;
+
     [SerializeField]
     Transform targetTransform;
-    private Animator animator;
+
     public string currentState;
 
     [Header("Patrol Settings")]
@@ -27,23 +26,6 @@ public class Chaser : MonoBehaviour
     void Start()
     {
         StartCoroutine(SwitchState("Idle"));
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
-
-        if (animator == null)
-            Debug.LogWarning("Animator not found on player.");
-        if (rb == null)
-            Debug.LogWarning("Rigidbody not found on player.");
-    }
-    void Update()
-    {
-        if (animator == null || rb == null) return;
-
-        Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
-        bool isWalking = horizontalVelocity.magnitude > movementThreshold;
-
-        animator.SetBool("iswalking", isWalking);
-        animator.SetBool("isidle", !isWalking);
     }
 
     IEnumerator SwitchState(string newState)
@@ -63,7 +45,6 @@ public class Chaser : MonoBehaviour
 
         while (currentState == "Idle")
         {
-
             if (targetTransform != null)
             {
                 StartCoroutine(SwitchState("ChaseTarget"));
@@ -85,7 +66,6 @@ public class Chaser : MonoBehaviour
     {
         while (currentState == "Patrol")
         {
-
             if (targetTransform != null)
             {
                 StartCoroutine(SwitchState("ChaseTarget"));
