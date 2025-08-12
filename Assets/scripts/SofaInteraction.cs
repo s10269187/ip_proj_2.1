@@ -20,11 +20,19 @@ public class SofaInteraction : MonoBehaviour
 
     private bool isSleeping = false;
 
+    
+    [SerializeField] public GameObject bgmAudio1;
+
+    [SerializeField] public GameObject bgmAudio2;
+
+
     public void TriggerSleep(GameObject player)
     {
         if (!isSleeping)
         {
             StartCoroutine(SleepSequence(player));
+            bgmAudio1.SetActive(false);
+            bgmAudio2.SetActive(true);
         }
     }
 
