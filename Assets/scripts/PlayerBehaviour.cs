@@ -14,6 +14,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         private PickUp pickUpScript;
 
+                  
+
         void Start()
         {
             pickUpScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PickUp>();
@@ -95,5 +97,5 @@ public class PlayerBehaviour : MonoBehaviour
                 }
 
                 currentDoor = null;
-            }
+        }
 }
