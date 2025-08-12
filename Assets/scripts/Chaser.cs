@@ -6,8 +6,10 @@ public class Chaser : MonoBehaviour
 {
     NavMeshAgent myAgent;
 
+    private Coroutine stateCoroutine;
+
     [SerializeField]
-    Transform targetTransform;
+    Transform playerTransform;
 
     public string currentState;
 
@@ -17,15 +19,44 @@ public class Chaser : MonoBehaviour
 
     private int currentPatrolIndex = 0;
 
-    void Awake()
-    {
-        myAgent = GetComponent<NavMeshAgent>();
-        myAgent.autoBraking = true;
-    }
+    public float minIdleTime = 5f;
+
+    public float maxIdleTime = 8f;
+
+    private Animator animator;
+    
+    [Header("Detection Settings")]
+    public float detectionRadius = 5f;
 
     void Start()
     {
-        StartCoroutine(SwitchState("Idle"));
+        myAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        myAgent.autoBraking = true;
+
+        if (patrolPoints.Length > 0)
+            StartCoroutine(SwitchState("Patrol"));
+        else
+            StartCoroutine(SwitchState("Idle"));
+    }
+
+
+
+    void Update()
+    {
+        if (playerTransform == null)
+        {
+            Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius);
+            foreach (var hit in hits)
+            {
+                if (hit.CompareTag("Player"))
+                {
+                    playerTransform = hit.transform;
+                    StartCoroutine(SwitchState("ChaseTarget"));
+                    break;
+                }
+            }
+        }
     }
 
     IEnumerator SwitchState(string newState)
@@ -33,21 +64,37 @@ public class Chaser : MonoBehaviour
         if (currentState == newState)
             yield break;
 
-        StopAllCoroutines(); // Stop previous state
+        animator.SetBool("isWalking", true); 
+
+        if (stateCoroutine != null)
+            StopCoroutine(stateCoroutine);
+
         currentState = newState;
 
-        StartCoroutine(newState);
+        switch (newState)
+        {
+            case "Idle":
+                stateCoroutine = StartCoroutine(Idle());
+                break;
+            case "Patrol":
+                stateCoroutine = StartCoroutine(Patrol());
+                break;
+            case "ChaseTarget":
+                stateCoroutine = StartCoroutine(ChaseTarget());
+                break;
+        }
     }
 
     IEnumerator Idle()
     {
         float timer = 0f;
+        animator.SetTrigger("isidle");
 
         while (currentState == "Idle")
         {
-            if (targetTransform != null)
+            if (playerTransform != null)
             {
-                StartCoroutine(SwitchState("ChaseTarget"));
+                StartCoroutine(SwitchState("ChaseTarget")); 
                 yield break;
             }
 
@@ -66,7 +113,9 @@ public class Chaser : MonoBehaviour
     {
         while (currentState == "Patrol")
         {
-            if (targetTransform != null)
+            animator.SetTrigger("iswalking");
+            myAgent.SetDestination(patrolPoints[currentPatrolIndex].position);
+            if (playerTransform != null)
             {
                 StartCoroutine(SwitchState("ChaseTarget"));
                 yield break;
@@ -85,7 +134,7 @@ public class Chaser : MonoBehaviour
             // Wait until the chaser reaches the patrol point
             while (myAgent.pathPending || myAgent.remainingDistance > myAgent.stoppingDistance)
             {
-                if (targetTransform != null)
+                if (playerTransform != null)
                 {
                     StartCoroutine(SwitchState("ChaseTarget"));
                     yield break;
@@ -102,28 +151,30 @@ public class Chaser : MonoBehaviour
 
     IEnumerator ChaseTarget()
     {
+        animator.SetTrigger("iswalking");
         while (currentState == "ChaseTarget")
         {
-            if (targetTransform == null)
+            if (playerTransform == null)
             {
-                StartCoroutine(SwitchState("Idle"));
+                StartCoroutine(SwitchState("Patrol"));
                 yield break;
             }
 
-            myAgent.SetDestination(targetTransform.position);
+            myAgent.SetDestination(playerTransform.position);
             yield return null;
         }
     }
 
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-            targetTransform = other.transform;
+            playerTransform = other.transform;
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-            targetTransform = null;
+            playerTransform = null;
     }
 }
