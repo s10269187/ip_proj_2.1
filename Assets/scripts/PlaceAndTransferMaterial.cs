@@ -140,10 +140,11 @@ public class PlaceAndTransferMaterial : MonoBehaviour
         Rigidbody rb = player.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            transform.position = teleportDestination.position;
+            
+            player.transform.position = teleportDestination.position; 
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            Debug.Log("🚀 Player teleported using Rigidbody.");
+            Debug.Log("Player teleported using Rigidbody.");
         }
         else
         {

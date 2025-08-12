@@ -64,8 +64,8 @@ public class TeleportOnTrigger : MonoBehaviour
 
             if (rb != null)
             {
-                rb.linearVelocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
+                //rb.linearVelocity = Vector3.zero;
+                //rb.angularVelocity = Vector3.zero;
                 rb.Sleep();
             }
 
