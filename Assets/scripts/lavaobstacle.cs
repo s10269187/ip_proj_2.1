@@ -3,9 +3,13 @@ using UnityEngine;
 public class lavaobstacle : MonoBehaviour
 {
     public Transform spawnPoint;
+
+    public AudioSource lava;
+
     public void OnTriggerEnter(Collider other)
     {
         // If player touches a hazard, reset to current spawn point
+        
         if (other.CompareTag("Player"))
         {
             Rigidbody rb = other.GetComponent<Rigidbody>();
@@ -14,6 +18,7 @@ public class lavaobstacle : MonoBehaviour
             {
                 other.transform.position = spawnPoint.position;
                 Debug.Log("Teleporting to: " + spawnPoint.position);
+                lava.Play();
 
                 if (rb != null)
                 {
