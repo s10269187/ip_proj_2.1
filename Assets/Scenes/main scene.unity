@@ -38381,15 +38381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797285d3eadf37e48a63c5245da95b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 137842752}
   currentState: 
   patrolPoints:
   - {fileID: 1443003046}
   - {fileID: 837684766}
+  - {fileID: 488735854}
   idleTime: 2
   minIdleTime: 5
-  maxIdleTime: 8
-  detectionRadius: 5
+  maxIdleTime: 6
 --- !u!95 &229967546
 Animator:
   serializedVersion: 7
@@ -70892,6 +70891,37 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &488735853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488735854}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &488735854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488735853}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000002533197}
+  m_LocalPosition: {x: 896.86, y: 0.1655677, z: 329.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &489000339
 GameObject:
   m_ObjectHideFlags: 0
@@ -109188,7 +109218,7 @@ Transform:
   m_GameObject: {fileID: 837684765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 895.28, y: 0.1655677, z: 336.09}
+  m_LocalPosition: {x: 896.86, y: 0.1655677, z: 337.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136669,7 +136699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797285d3eadf37e48a63c5245da95b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 137842752}
   currentState: 
   patrolPoints:
   - {fileID: 1443003046}
@@ -136677,7 +136706,6 @@ MonoBehaviour:
   idleTime: 2
   minIdleTime: 5
   maxIdleTime: 8
-  detectionRadius: 5
 --- !u!95 &1082116994
 Animator:
   serializedVersion: 7
@@ -280216,6 +280244,7 @@ SceneRoots:
   - {fileID: 743611837}
   - {fileID: 1443003046}
   - {fileID: 837684766}
+  - {fileID: 488735854}
   - {fileID: 1531894983}
   - {fileID: 657377714}
   - {fileID: 1422517736}
