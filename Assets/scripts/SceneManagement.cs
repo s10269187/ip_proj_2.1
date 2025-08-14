@@ -3,13 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    public void OnStartClick()
+    public void LoadScene()
     {
-    SceneManager.LoadScene("GameScene"); // Replace "GameScene" with your scene name
+        SceneManager.LoadScene("mainscene");
     }
-    public void OnInstructionButton ()
-    {
-        SceneManager.LoadScene(2);
-    }
-    
+
 }
