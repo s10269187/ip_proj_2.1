@@ -1367,6 +1367,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5788774296584766173, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
   m_PrefabInstance: {fileID: 18471797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &18592050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 18592051}
+  m_Layer: 0
+  m_Name: redcar_pt (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &18592051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18592050}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 247.06, y: 0, z: -4.1900024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &22417899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3910,6 +3941,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
   m_PrefabInstance: {fileID: 51008218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &51155771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51155772}
+  m_Layer: 0
+  m_Name: redcar_pt (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51155772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51155771}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 178.56995, y: 0, z: -69.68001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &51405853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5553,6 +5615,75 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 360
+--- !u!1 &72190459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72190460}
+  m_Layer: 0
+  m_Name: redcar_waypt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &72190460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72190459}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 547.9, y: 0.247, z: 297.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 322337065}
+  - {fileID: 1971538810}
+  - {fileID: 2054982055}
+  - {fileID: 1499059900}
+  - {fileID: 1051397919}
+  - {fileID: 1104794926}
+  - {fileID: 144011877}
+  - {fileID: 51155772}
+  - {fileID: 1681090520}
+  - {fileID: 975074153}
+  - {fileID: 1875680206}
+  - {fileID: 819650651}
+  - {fileID: 1190330397}
+  - {fileID: 1091732143}
+  - {fileID: 476607545}
+  - {fileID: 1076285232}
+  - {fileID: 193039613}
+  - {fileID: 1911917146}
+  - {fileID: 18592051}
+  - {fileID: 769443342}
+  - {fileID: 763031198}
+  - {fileID: 2129776110}
+  - {fileID: 392651150}
+  - {fileID: 1568390053}
+  - {fileID: 108704843}
+  - {fileID: 1622223310}
+  - {fileID: 984489746}
+  - {fileID: 1349608805}
+  - {fileID: 545834174}
+  - {fileID: 1780882558}
+  - {fileID: 186393903}
+  - {fileID: 610962533}
+  - {fileID: 640518438}
+  - {fileID: 1241873364}
+  - {fileID: 1279032484}
+  - {fileID: 484693201}
+  - {fileID: 259811098}
+  - {fileID: 716538183}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &75355732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13776,6 +13907,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
+--- !u!1 &108704842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108704843}
+  m_Layer: 0
+  m_Name: redcar_pt (24)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108704843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108704842}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 232.04999, y: 0, z: -3.130005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &110256363
 GameObject:
   m_ObjectHideFlags: 0
@@ -17329,6 +17491,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6913860747637961939, guid: 75112efb983f5ba42b3439603a346662, type: 3}
   m_PrefabInstance: {fileID: 143212143}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &144011876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144011877}
+  m_Layer: 0
+  m_Name: redcar_pt (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144011877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144011876}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 178.32996, y: 0, z: -66.79001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &144337740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25605,6 +25798,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
+--- !u!1 &186393902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 186393903}
+  m_Layer: 0
+  m_Name: redcar_pt (30)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &186393903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186393902}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 219.81995, y: 0, z: 4.5999756}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &187063896
 GameObject:
   m_ObjectHideFlags: 0
@@ -26049,6 +26273,37 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &193039612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193039613}
+  m_Layer: 0
+  m_Name: redcar_pt (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193039613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193039612}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 250.00995, y: 0, z: -12.089996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &193544796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30059,6 +30314,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
   m_PrefabInstance: {fileID: 259335089}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &259811097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259811098}
+  m_Layer: 0
+  m_Name: redcar_pt (36)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &259811098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259811097}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.369995, y: 0, z: -0.19000244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &260528330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33202,6 +33488,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5788774296584766173, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
   m_PrefabInstance: {fileID: 142804156}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &322337064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322337065}
+  m_Layer: 0
+  m_Name: redcar_pt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &322337065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322337064}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &322463967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43612,6 +43929,37 @@ MonoBehaviour:
   handAnchor: {fileID: 0}
   heldLocalPosition: {x: 0, y: 5, z: 0}
   heldLocalRotation: {x: 0, y: 0, z: 0}
+--- !u!1 &392651149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392651150}
+  m_Layer: 0
+  m_Name: redcar_pt (22)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &392651150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392651149}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 235.19995, y: 0, z: -4.2700195}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393049838
 GameObject:
   m_ObjectHideFlags: 0
@@ -47653,6 +48001,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
   m_PrefabInstance: {fileID: 458120222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &459898059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1200098689}
+    m_Modifications:
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7482512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.86683136
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 523.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.20000076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.376648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9979469
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.06404697
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 367.344
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113133920178677041, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_Name
+      value: curved-road (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+--- !u!4 &459898060 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+  m_PrefabInstance: {fileID: 459898059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &461859595
 GameObject:
   m_ObjectHideFlags: 0
@@ -48583,6 +49001,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4912249237077614477, guid: 1be40a4c25b4a784b813b971c53a3dee, type: 3}
   m_PrefabInstance: {fileID: 476434341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &476607544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 476607545}
+  m_Layer: 0
+  m_Name: redcar_pt (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &476607545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476607544}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 249.66998, y: 0, z: -69.48001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479103870
 GameObject:
   m_ObjectHideFlags: 0
@@ -49018,6 +49467,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
   m_PrefabInstance: {fileID: 483028608}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &484693200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 484693201}
+  m_Layer: 0
+  m_Name: redcar_pt (35)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &484693201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484693200}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.369995, y: 0, z: 4.2299805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &485682139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52587,6 +53067,159 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
+--- !u!1 &545834173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545834174}
+  m_Layer: 0
+  m_Name: redcar_pt (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545834174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545834173}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 227.28998, y: 0, z: 3.0799866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &546357126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 546.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16297531
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 297.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753004736906549658, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661947973576653372, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_Name
+      value: Red_car
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661947973576653372, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4762392834469509401, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6661947973576653372, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 546357128}
+  m_SourcePrefab: {fileID: 100100000, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+--- !u!1 &546357127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6661947973576653372, guid: 9e2cb0893af87e341b128d02e3fb8d55, type: 3}
+  m_PrefabInstance: {fileID: 546357126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &546357128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546357127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5e1a294304db94d857d6f69ebf04cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 322337065}
+  - {fileID: 1971538810}
+  - {fileID: 2054982055}
+  - {fileID: 1499059900}
+  - {fileID: 1051397919}
+  - {fileID: 1104794926}
+  - {fileID: 144011877}
+  - {fileID: 51155772}
+  - {fileID: 1681090520}
+  - {fileID: 975074153}
+  - {fileID: 1875680206}
+  - {fileID: 819650651}
+  - {fileID: 1190330397}
+  - {fileID: 1091732143}
+  - {fileID: 476607545}
+  - {fileID: 1076285232}
+  - {fileID: 193039613}
+  - {fileID: 1911917146}
+  - {fileID: 18592051}
+  - {fileID: 769443342}
+  - {fileID: 763031198}
+  - {fileID: 2129776110}
+  - {fileID: 392651150}
+  - {fileID: 1568390053}
+  - {fileID: 108704843}
+  - {fileID: 1622223310}
+  - {fileID: 984489746}
+  - {fileID: 1349608805}
+  - {fileID: 545834174}
+  - {fileID: 1780882558}
+  - {fileID: 186393903}
+  - {fileID: 610962533}
+  - {fileID: 640518438}
+  - {fileID: 1241873364}
+  - {fileID: 1279032484}
+  - {fileID: 484693201}
+  - {fileID: 259811098}
+  - {fileID: 716538183}
+  speed: 22
 --- !u!4 &546452088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5788774296584766173, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
@@ -57382,6 +58015,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1694870447252121871, guid: 7262e4d37b7139f499e4b4b971b03fef, type: 3}
   m_PrefabInstance: {fileID: 610170763}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &610962532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610962533}
+  m_Layer: 0
+  m_Name: redcar_pt (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610962533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610962532}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 213.91998, y: 0, z: 5.069977}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &613906858
 GameObject:
   m_ObjectHideFlags: 0
@@ -58971,6 +59635,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
   m_PrefabInstance: {fileID: 640162039}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &640518437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640518438}
+  m_Layer: 0
+  m_Name: redcar_pt (32)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &640518438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640518437}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 204.59998, y: 0, z: 5.619995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640549072
 GameObject:
   m_ObjectHideFlags: 0
@@ -63768,6 +64463,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
   m_PrefabInstance: {fileID: 715802279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &716538182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716538183}
+  m_Layer: 0
+  m_Name: redcar_pt (37)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &716538183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716538182}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.619995, y: 0, z: -0.19000244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &720387309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66569,6 +67295,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7993737882177653581, guid: e146eb86f1c8be74f94c13d5648fa033, type: 3}
   m_PrefabInstance: {fileID: 761186161}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &763031197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 763031198}
+  m_Layer: 0
+  m_Name: redcar_pt (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &763031198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763031197}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 241.88, y: 0, z: -5.3700256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &765544848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66631,6 +67388,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6419396601931151546, guid: dbcc518b01688514c92aa903e9ff2b8c, type: 3}
   m_PrefabInstance: {fileID: 765544848}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &769443341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769443342}
+  m_Layer: 0
+  m_Name: redcar_pt (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769443342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769443341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 244.25995, y: 0, z: -5.0899963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &771193015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69442,6 +70230,37 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &819650650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 819650651}
+  m_Layer: 0
+  m_Name: redcar_pt (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &819650651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819650650}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 245.87, y: 0, z: -71.69002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &820823945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78292,6 +79111,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6913860747637961939, guid: 75112efb983f5ba42b3439603a346662, type: 3}
   m_PrefabInstance: {fileID: 971140089}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &975074152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975074153}
+  m_Layer: 0
+  m_Name: redcar_pt (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &975074153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975074152}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 181.29999, y: 0, z: -71.69002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &975247667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78782,6 +79632,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4182592822957142072, guid: 3457efda29242804da124138e62eccbd, type: 3}
   m_PrefabInstance: {fileID: 984373327}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984489745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984489746}
+  m_Layer: 0
+  m_Name: redcar_pt (26)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984489746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984489745}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 229.63995, y: 0, z: -0.9700012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &984970884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82777,6 +83658,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6309955532645973491, guid: feb16b46e314cb344894359b5b3991aa, type: 3}
   m_PrefabInstance: {fileID: 1051164700}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1051397918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051397919}
+  m_Layer: 0
+  m_Name: redcar_pt (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051397919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051397918}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 178.07996, y: 0, z: -2.1200256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051534286
 GameObject:
   m_ObjectHideFlags: 0
@@ -84882,6 +85794,37 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1076285231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076285232}
+  m_Layer: 0
+  m_Name: redcar_pt (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1076285232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076285231}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 250.00995, y: 0, z: -67.30002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1076409271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85866,6 +86809,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8325814327023232969, guid: 15b34976941fce04fbd4daba933d8f1e, type: 3}
   m_PrefabInstance: {fileID: 1091592509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1091732142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091732143}
+  m_Layer: 0
+  m_Name: redcar_pt (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091732143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091732142}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 248.98999, y: 0, z: -70.81001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093233479
 GameObject:
   m_ObjectHideFlags: 0
@@ -93467,6 +94441,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
+--- !u!1 &1104794925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104794926}
+  m_Layer: 0
+  m_Name: redcar_pt (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1104794926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104794925}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 178.32996, y: 0, z: -3.9700012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106294329
 GameObject:
   m_ObjectHideFlags: 0
@@ -99956,6 +100961,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6913860747637961939, guid: 75112efb983f5ba42b3439603a346662, type: 3}
   m_PrefabInstance: {fileID: 1188304755}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1190330396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190330397}
+  m_Layer: 0
+  m_Name: redcar_pt (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1190330397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190330396}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 247.52997, y: 0, z: -71.44002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1192571177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100543,6 +101579,8 @@ Transform:
   - {fileID: 33524215}
   - {fileID: 2087073743}
   - {fileID: 39305617}
+  - {fileID: 459898060}
+  - {fileID: 1417211529}
   - {fileID: 1947654936}
   - {fileID: 1241815473}
   - {fileID: 1757598126}
@@ -102819,6 +103857,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
   m_PrefabInstance: {fileID: 1241815472}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1241873363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241873364}
+  m_Layer: 0
+  m_Name: redcar_pt (33)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1241873364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241873363}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.790039, y: 0, z: 5.619995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1243503886
 GameObject:
   m_ObjectHideFlags: 0
@@ -111324,6 +112393,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4484106957331255840, guid: 62a508e82b72fda458b4b268d4d56176, type: 3}
   m_PrefabInstance: {fileID: 1279007504}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1279032483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1279032484}
+  m_Layer: 0
+  m_Name: redcar_pt (34)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1279032484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279032483}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.369995, y: 0, z: 5.619995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1279437502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115076,6 +116176,37 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1349608804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349608805}
+  m_Layer: 0
+  m_Name: redcar_pt (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1349608805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349608804}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 227.88995, y: 0, z: 1.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1350466342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118868,6 +119999,76 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1694870447252121871, guid: 7262e4d37b7139f499e4b4b971b03fef, type: 3}
   m_PrefabInstance: {fileID: 1416346821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1417211528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1200098689}
+    m_Modifications:
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.63385546
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9099129
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 511.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.20000076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8941734
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.44772092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 413.195
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113133920178677041, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+      propertyPath: m_Name
+      value: curved-road (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+--- !u!4 &1417211529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5704054280860004548, guid: 1940fb4f61a13ef44a9cc06ce0ef2488, type: 3}
+  m_PrefabInstance: {fileID: 1417211528}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1418645728
 GameObject:
@@ -124819,6 +126020,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1267747805279626512, guid: ae18698364211d141842a7db4cebc130, type: 3}
   m_PrefabInstance: {fileID: 1497905071}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1499059899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499059900}
+  m_Layer: 0
+  m_Name: redcar_pt (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1499059900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499059899}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 176.44, y: 0, z: -0.38000488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1499125516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127215,7 +128447,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 67b58360981934642959361b729b923c, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1534118471 stripped
 Transform:
@@ -128953,6 +130185,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568358904}
   m_Mesh: {fileID: -2028697918056500313, guid: 13afdabc8cae74d479b8ffc3d4f4e375, type: 3}
+--- !u!1 &1568390052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568390053}
+  m_Layer: 0
+  m_Name: redcar_pt (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568390053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568390052}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 233.23999, y: 0, z: -3.7200012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1568827554
 GameObject:
   m_ObjectHideFlags: 0
@@ -132068,6 +133331,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6009840241060681995, guid: 73df0995c30309d48a2ed85c696a3079, type: 3}
   m_PrefabInstance: {fileID: 1620805356}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1622223309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622223310}
+  m_Layer: 0
+  m_Name: redcar_pt (25)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622223310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622223309}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 230.64996, y: 0, z: -2.100006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622472212
 GameObject:
   m_ObjectHideFlags: 0
@@ -136563,6 +137857,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1681090519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1681090520}
+  m_Layer: 0
+  m_Name: redcar_pt (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1681090520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681090519}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 179.5, y: 0, z: -70.84001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1681547645
 GameObject:
   m_ObjectHideFlags: 0
@@ -142106,6 +143431,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6319970609902138336, guid: bc206b9193ece0d43ac23f9edaf7cea4, type: 3}
   m_PrefabInstance: {fileID: 1779694680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1780882557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780882558}
+  m_Layer: 0
+  m_Name: redcar_pt (29)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1780882558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780882557}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 225.69995, y: 0, z: 5.3299866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1781232784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153476,7 +154832,7 @@ MonoBehaviour:
   - {fileID: 1908791133}
   - {fileID: 634520664}
   - {fileID: 215132}
-  speed: 5
+  speed: 15
 --- !u!1001 &1865250571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154020,6 +155376,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1694870447252121871, guid: 7262e4d37b7139f499e4b4b971b03fef, type: 3}
   m_PrefabInstance: {fileID: 1875259352}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1875680205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875680206}
+  m_Layer: 0
+  m_Name: redcar_pt (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1875680206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875680205}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 182.48999, y: 0, z: -71.69002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1878216939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157466,6 +158853,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4912249237077614477, guid: 1be40a4c25b4a784b813b971c53a3dee, type: 3}
   m_PrefabInstance: {fileID: 1910687933}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1911917145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911917146}
+  m_Layer: 0
+  m_Name: redcar_pt (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1911917146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911917145}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 250.00995, y: 0, z: -3.5400085}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1914378649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161520,6 +162938,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971306637}
   m_Mesh: {fileID: -3518974812851363561, guid: 13afdabc8cae74d479b8ffc3d4f4e375, type: 3}
+--- !u!1 &1971538809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971538810}
+  m_Layer: 0
+  m_Name: redcar_pt (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1971538810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971538809}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 169.59998, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1971578215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168764,6 +170213,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6913860747637961939, guid: 75112efb983f5ba42b3439603a346662, type: 3}
   m_PrefabInstance: {fileID: 2054135217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054982054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054982055}
+  m_Layer: 0
+  m_Name: redcar_pt (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2054982055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054982054}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 173.33997, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2055612638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5788774296584766173, guid: ecd7cefd70b506542bb82b4b95f9a903, type: 3}
@@ -173782,6 +175262,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6913860747637961939, guid: 75112efb983f5ba42b3439603a346662, type: 3}
   m_PrefabInstance: {fileID: 2127155362}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2129776109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129776110}
+  m_Layer: 0
+  m_Name: redcar_pt (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2129776110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129776109}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 237.93, y: 0, z: -5.130005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72190460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2129816208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176443,3 +177954,5 @@ SceneRoots:
   - {fileID: 1422517736}
   - {fileID: 64183526}
   - {fileID: 1863789387}
+  - {fileID: 72190460}
+  - {fileID: 546357126}
