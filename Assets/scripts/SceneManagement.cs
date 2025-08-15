@@ -15,7 +15,16 @@ public class SceneManagement : MonoBehaviour
     public string targetScene = "RETURN_ms"; 
     // Name of spawn point in target scene
     public string spawnPointName = "spawn_return"; 
+    // Called when the script instance is being loaded
+    
 
+    public void LoadMainScene()
+    {
+        SceneManager.LoadScene("mainscene");
+    }
+
+
+    
     void Start()
     {
         // If the current scene is the target scene, move player to the designated spawn point
