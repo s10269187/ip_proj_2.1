@@ -1,31 +1,35 @@
 using UnityEngine;
 using System.Collections;
 
+// Controls sleep and wake-up interaction with a sofa
 public class SofaInteraction : MonoBehaviour
 {
+    // Where the player lies down
     [Header("Positions")]
-    public Transform sleepPosition;       // Where player lies down
-    public Transform teleportTarget;      // Where player wakes up
-
+    public Transform sleepPosition;       
+    // Where the player wakes up
+    public Transform teleportTarget;      
+    // UI fade effect
     [Header("Fade Settings")]
-    public CanvasGroup fadeCanvas;
-    public float fadeDuration = 2f;
-
+    public CanvasGroup fadeCanvas;        
+    // Time to fade in/out
+    public float fadeDuration = 2f;       
+    // Rotation angle
     [Header("Rotation Settings")]
-    public Vector3 lookUpEuler = new Vector3(60f, 0f, 0f);
-    public float lookUpDuration = 2f;
-
+    public Vector3 lookUpEuler = new Vector3(60f, 0f, 0f); 
+    // Time to rotate
+    public float lookUpDuration = 2f;                      
+    // Controls prompt display
     [Header("References")]
-    public SofaTrigger sofaTrigger;
+    public SofaTrigger sofaTrigger;       
+    // Tracks sleep state
+    private bool isSleeping = false;      
+    // Music before sleep
+    [SerializeField] public GameObject bgmAudio1; 
+    // Music after sleep
+    [SerializeField] public GameObject bgmAudio2; 
 
-    private bool isSleeping = false;
-
-    
-    [SerializeField] public GameObject bgmAudio1;
-
-    [SerializeField] public GameObject bgmAudio2;
-
-
+    // Called when player interacts with the sofa
     public void TriggerSleep(GameObject player)
     {
         if (!isSleeping)
@@ -36,19 +40,20 @@ public class SofaInteraction : MonoBehaviour
         }
     }
 
+    // Runs the sleep and wake-up steps
     IEnumerator SleepSequence(GameObject player)
     {
         isSleeping = true;
 
-        // Disable player movement
+        // Stop player movement
         var controller = player.GetComponent<PlayerBehaviour>();
         if (controller) controller.enabled = false;
 
-        // Hide prompt
+        // Hide the prompt
         if (sofaTrigger != null)
             sofaTrigger.HidePrompt();
 
-        // ✅ STEP 1: Teleport player to sleep position immediately
+        // Move player to sleep position
         if (sleepPosition != null)
         {
             var cc = player.GetComponent<CharacterController>();
@@ -58,25 +63,19 @@ public class SofaInteraction : MonoBehaviour
             player.transform.rotation = sleepPosition.rotation;
 
             if (cc != null) cc.enabled = true;
-
-            Debug.Log("Player teleported to sleep position");
-        }
-        else
-        {
-            Debug.LogWarning("Sleep position not assigned!");
         }
 
-        // ✅ STEP 2: Play sleep animation
+        // Play sleep animation
         var anim = player.GetComponent<Animator>();
         if (anim) anim.SetTrigger("Sleep");
 
-        // ✅ STEP 3: Rotate player upward
+        // Rotate player upward
         yield return StartCoroutine(RotatePlayerUp(player));
 
-        // ✅ STEP 4: Fade out
+        // Fade screen to black
         yield return StartCoroutine(FadeOut());
 
-        // ✅ STEP 5: Teleport to wake-up location
+        // Move player to wake-up position
         if (teleportTarget != null)
         {
             var cc = player.GetComponent<CharacterController>();
@@ -86,19 +85,18 @@ public class SofaInteraction : MonoBehaviour
             player.transform.rotation = teleportTarget.rotation;
 
             if (cc != null) cc.enabled = true;
-
-            Debug.Log("Player teleported to wake-up position");
         }
 
-        // ✅ STEP 6: Fade in
+        // Fade screen back in
         yield return StartCoroutine(FadeIn());
 
-        // Re-enable player movement
+        // Allow player to move again
         if (controller) controller.enabled = true;
 
         isSleeping = false;
     }
 
+    // Smoothly rotates the player
     IEnumerator RotatePlayerUp(GameObject player)
     {
         Quaternion startRot = player.transform.rotation;
@@ -113,6 +111,7 @@ public class SofaInteraction : MonoBehaviour
         }
     }
 
+    // Fades screen to black
     IEnumerator FadeOut()
     {
         float t = 0;
@@ -125,6 +124,7 @@ public class SofaInteraction : MonoBehaviour
         }
     }
 
+    // Fades screen from black
     IEnumerator FadeIn()
     {
         float t = 0;
