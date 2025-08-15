@@ -18,6 +18,7 @@ TagManager:
   - Teleport
   - MainSceneUI
   - TeleportEnd
+  - NPC
   layers:
   - Default
   - TransparentFX
