@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    
     [SerializeField] Transform spawnPoint;
+
+    [SerializeField] Transform spawnLocation;
 
     [Header("UI Settings")]
     public TextMeshProUGUI promptText;
@@ -98,6 +102,16 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ghost"))
+        {
+            Debug.Log("Ghost touched the player. Respawning...");
+            Respawn();
+        }
+    }
+
+
     void ClearPrompt()
     {
         if (promptText != null)
@@ -109,4 +123,28 @@ public class PlayerBehaviour : MonoBehaviour
         currentDoor = null;
         currentDialogue = null;
     }
-}
+    public void Respawn()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+
+        if (spawnLocation != null)
+        {
+            transform.position = spawnLocation.position;
+            Debug.Log("Teleporting to: " + spawnLocation.position);
+
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.Sleep();
+
+                Physics.SyncTransforms();
+            }
+            else
+            {
+                Debug.LogWarning("Spawn location not assigned!");
+            }
+        }
+
+        }
+    }

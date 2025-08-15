@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using UnityEngine.SceneManagement; // Needed for scene switching
+using UnityEngine.SceneManagement; 
 
 public class Dialogue : MonoBehaviour
 {
