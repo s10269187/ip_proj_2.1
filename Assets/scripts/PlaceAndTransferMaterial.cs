@@ -31,6 +31,11 @@ public class PlaceAndTransferMaterial : MonoBehaviour
 
     private bool hasTeleported = false;
 
+    void Start()
+    {
+    DontDestroyOnLoad(gameObject);
+    }
+
     private void Awake()
     {
         if (cutsceneDirector != null)
