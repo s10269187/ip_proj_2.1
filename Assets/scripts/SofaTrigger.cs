@@ -1,10 +1,14 @@
-using UnityEngine;
-using UnityEngine.UI;
-
 /// <summary>
 /// Detects when the player is near the sofa and displays a sleep prompt.
 /// Initiates the sleep interaction when the player presses the interaction key.
 /// </summary>
+/// /// <author> Aralyn Han Zi Ning </author>       
+/// <date> 02/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+using UnityEngine.UI;
+
+
 public class SofaTrigger : MonoBehaviour
 {
     /// <summary>

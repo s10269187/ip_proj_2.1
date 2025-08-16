@@ -1,3 +1,11 @@
+/// <summary>
+/// Handles the pickup and throwing of objects in the game.
+/// Allows the player to pick up objects within a specified range,
+/// hold them, and throw them with a specified force.
+/// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 05/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
 using UnityEngine;
 
 public class PickUp : MonoBehaviour

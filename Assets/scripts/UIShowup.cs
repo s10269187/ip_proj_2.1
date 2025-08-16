@@ -1,10 +1,14 @@
-using UnityEngine;
-using TMPro;
-
 /// <summary>
 /// Displays and updates task UI based on the player's current zone.
 /// Tracks task completion and applies strikethrough formatting.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 09/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+using TMPro;
+
+
 public class UIShowUp : MonoBehaviour
 {
     /// <summary>

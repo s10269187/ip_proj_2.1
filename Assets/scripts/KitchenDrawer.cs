@@ -1,10 +1,14 @@
-using UnityEngine;
-using TMPro;
-
 /// <summary>
 /// Allows the player to interact with a sliding drawer using a key press,
 /// showing a UI prompt when within range and smoothly animating the drawer open or closed.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 01/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+using TMPro;
+
+
 public class SlidingDrawerWithPrompt : MonoBehaviour
 {
     /// <summary>

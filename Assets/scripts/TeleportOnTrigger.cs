@@ -1,11 +1,15 @@
-using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-
 /// <summary>
 /// Teleports the player to a target location when entering a trigger zone,
 /// using a fade-to-black and fade-in visual effect.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 11/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+
 public class TeleportOnTrigger : MonoBehaviour
 {
     /// <summary>
@@ -87,7 +91,7 @@ public class TeleportOnTrigger : MonoBehaviour
     /// <summary>
     /// Moves the player to the teleport position and resets their physics state.
     /// </summary>
-    /// <param name="other">The player's collider.</param>
+
     public void Respawn(Collider other)
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();

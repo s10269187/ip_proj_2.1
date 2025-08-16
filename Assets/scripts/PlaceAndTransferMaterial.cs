@@ -1,13 +1,17 @@
+/// <summary>
+/// Handles placing an item, transferring its material to a target object,
+/// triggering a cutscene, and teleporting the player with a fade effect.
+/// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 07/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
 using UnityEngine;
 using TMPro;
 using UnityEngine.Playables;
 using UnityEngine.UI;
 using System.Collections;
 
-/// <summary>
-/// Handles placing an item, transferring its material to a target object,
-/// triggering a cutscene, and teleporting the player with a fade effect.
-/// </summary>
+
 public class PlaceAndTransferMaterial : MonoBehaviour
 {
     /// <summary>

@@ -1,8 +1,12 @@
-using UnityEngine;
-
 /// <summary>
 /// Controls the rotation of a door between open and closed states.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 01/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+
+using UnityEngine;
+
 public class DoorBehaviour : MonoBehaviour
 {
     /// <summary>

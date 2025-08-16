@@ -1,11 +1,15 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-
 /// <summary>
 /// Handles player interactions with doors, NPCs, and placeable objects.
 /// Also manages UI prompts and respawn behavior.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 06/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+
 public class PlayerBehaviour : MonoBehaviour
 {
     /// <summary>

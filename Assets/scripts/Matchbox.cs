@@ -1,3 +1,11 @@
+/// <summary>
+/// Matchbox.cs
+/// This script handles the following of cabinet opening and closing
+/// and the matchbox being held by the player.
+/// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 02/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
 using UnityEngine;
 
 /// <summary>

@@ -1,8 +1,12 @@
-using UnityEngine;
 
 /// <summary>
 /// Controls walking and idle animations based on the player's movement velocity.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 12/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+
 public class Walkanimation : MonoBehaviour
 {
     /// <summary>

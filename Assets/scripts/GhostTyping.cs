@@ -1,10 +1,14 @@
+/// <summary>
+/// Simulates a ghost typing effect by displaying text one character at a time in a UI text field.
+/// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 09/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
 using UnityEngine;
 using TMPro;
 using System.Collections;
 
-/// <summary>
-/// Simulates a ghost typing effect by displaying text one character at a time in a UI text field.
-/// </summary>
+
 public class GhostTyping : MonoBehaviour
 {
     /// <summary>

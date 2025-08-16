@@ -1,13 +1,17 @@
+/// <summary>
+/// Triggers a timeline cutscene when the player enters a collider,
+/// disables player controls during the cutscene, and teleports the player afterward.
+/// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 11/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
 using UnityEngine;
 using UnityEngine.Playables;
 using StarterAssets;
 using UnityEngine.InputSystem;
 using System.Collections;
 
-/// <summary>
-/// Triggers a timeline cutscene when the player enters a collider,
-/// disables player controls during the cutscene, and teleports the player afterward.
-/// </summary>
+
 public class CutsceneTrigger : MonoBehaviour
 {
     /// <summary>

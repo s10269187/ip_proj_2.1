@@ -1,10 +1,13 @@
-using UnityEngine;
-using System.Collections;
-
 /// <summary>
 /// Controls the sleep and wake-up interaction with a sofa, including player movement,
 /// rotation, fade effects, and background music transitions.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>       
+/// <date> 02/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+using System.Collections;
+
 public class SofaInteraction : MonoBehaviour
 {
     /// <summary>

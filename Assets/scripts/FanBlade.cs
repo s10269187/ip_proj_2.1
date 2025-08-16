@@ -1,8 +1,10 @@
-using UnityEngine;
-
 /// <summary>
 /// Continuously rotates a fan blade around its local Z-axis.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 02/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
 public class FanBlade : MonoBehaviour
 {
     /// <summary>

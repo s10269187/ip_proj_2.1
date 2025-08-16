@@ -1,9 +1,13 @@
-using UnityEngine;
-using System.Collections;
-
 /// <summary>
 /// Singleton class that allows coroutines to be run globally from non-MonoBehaviour scripts.
 /// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 11/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
+using UnityEngine;
+using System.Collections;
+
+
 public class CoroutineRunner : MonoBehaviour
 {
     /// <summary>

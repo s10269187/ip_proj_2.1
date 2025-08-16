@@ -1,12 +1,15 @@
+/// <summary>
+/// Displays a sequence of dialogue lines with a typing effect.
+/// Advances on mouse click and transitions to a new scene when complete.
+/// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 15/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
 using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Displays a sequence of dialogue lines with a typing effect.
-/// Advances on mouse click and transitions to a new scene when complete.
-/// </summary>
 public class Dialogue : MonoBehaviour
 {
     /// <summary>

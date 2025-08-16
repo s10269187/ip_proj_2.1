@@ -1,11 +1,15 @@
+
+/// <summary>
+/// Handles scene transitions with fade effects and player teleportation to designated spawn points.
+/// </summary>
+/// <author> Aralyn Han Zi Ning </author>
+/// <date> 12/08/2025 </date>
+/// <StudentID> S10267170A </StudentID>
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-/// <summary>
-/// Handles scene transitions with fade effects and player teleportation to designated spawn points.
-/// </summary>
 public class SceneManagement : MonoBehaviour
 {
     /// <summary>
