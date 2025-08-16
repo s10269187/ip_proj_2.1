@@ -16940,6 +16940,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 364874663}
   spawnLocation: {fileID: 0}
   promptText: {fileID: 689814593}
+  taskText: {fileID: 0}
   dialogueBox: {fileID: 0}
   interactKey: 101
   playerCamera: {fileID: 1751483622}
@@ -84803,7 +84804,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 6fb0fca66278af84684e5bbe2014ff10, type: 3}
   m_Resource: {fileID: 8300000, guid: 6fb0fca66278af84684e5bbe2014ff10, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.59
+  m_Volume: 0.13
   m_Pitch: 1
   Loop: 1
   Mute: 0
