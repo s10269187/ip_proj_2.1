@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5568992937293228177}
   - component: {fileID: 160593876516633429}
   m_Layer: 0
-  m_Name: w
+  m_Name: lava sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
