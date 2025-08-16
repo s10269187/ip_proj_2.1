@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: A cursed wish
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b7c76d2c66fe0a34c8ff789f76132443, type: 2}
-  m_sharedMaterial: {fileID: 863538380975248762, guid: b7c76d2c66fe0a34c8ff789f76132443, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d6347e817ace164dade3c38bd038283, type: 2}
+  m_sharedMaterial: {fileID: -4890815819282356879, guid: 6d6347e817ace164dade3c38bd038283, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -30.215591, w: 0}
+  m_margin: {x: 0, y: 0, z: -35.958572, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
