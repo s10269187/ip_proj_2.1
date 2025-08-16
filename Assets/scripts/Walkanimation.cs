@@ -1,39 +1,46 @@
 using UnityEngine;
 
-// Controls walking and idle animation based on movement
+/// <summary>
+/// Controls walking and idle animations based on the player's movement velocity.
+/// </summary>
 public class Walkanimation : MonoBehaviour
 {
-    // Minimum speed to trigger walking
+    /// <summary>
+    /// Minimum horizontal speed required to trigger the walking animation.
+    /// </summary>
     [Header("Movement Settings")]
-    public float movementThreshold = 0.1f; 
-    // Animation controller
-    private Animator animator; 
-     // Physics body
-    private Rigidbody rb;     
+    public float movementThreshold = 0.1f;
 
+    /// <summary>
+    /// Reference to the Animator component controlling animations.
+    /// </summary>
+    private Animator animator;
+
+    /// <summary>
+    /// Reference to the Rigidbody component used to measure movement.
+    /// </summary>
+    private Rigidbody rb;
+
+    /// <summary>
+    /// Initializes references to Animator and Rigidbody components.
+    /// </summary>
     void Start()
     {
-        // Get Animator
-        // Get Rigidbody
-        animator = GetComponent<Animator>(); 
-        rb = GetComponent<Rigidbody>();      
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
+    /// <summary>
+    /// Updates animation states based on the player's horizontal movement.
+    /// </summary>
     void Update()
     {
-        // Skip if missing
-        if (animator == null || rb == null) return; 
+        if (animator == null || rb == null) return;
 
-        // Get horizontal movement only
         Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
-
-        // Check if moving
         bool isWalking = horizontalVelocity.magnitude > movementThreshold;
 
-        // Set animation states
-        // Walking animation
-        // Idle animation
-        animator.SetBool("iswalking", isWalking);   
-        animator.SetBool("isidle", !isWalking);     
+        animator.SetBool("iswalking", isWalking);
+        animator.SetBool("isidle", !isWalking);
     }
 }

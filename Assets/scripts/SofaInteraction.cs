@@ -1,35 +1,70 @@
 using UnityEngine;
 using System.Collections;
 
-// Controls sleep and wake-up interaction with a sofa
+/// <summary>
+/// Controls the sleep and wake-up interaction with a sofa, including player movement,
+/// rotation, fade effects, and background music transitions.
+/// </summary>
 public class SofaInteraction : MonoBehaviour
 {
-    // Where the player lies down
+    /// <summary>
+    /// The position where the player lies down to sleep.
+    /// </summary>
     [Header("Positions")]
-    public Transform sleepPosition;       
-    // Where the player wakes up
-    public Transform teleportTarget;      
-    // UI fade effect
-    [Header("Fade Settings")]
-    public CanvasGroup fadeCanvas;        
-    // Time to fade in/out
-    public float fadeDuration = 2f;       
-    // Rotation angle
-    [Header("Rotation Settings")]
-    public Vector3 lookUpEuler = new Vector3(60f, 0f, 0f); 
-    // Time to rotate
-    public float lookUpDuration = 2f;                      
-    // Controls prompt display
-    [Header("References")]
-    public SofaTrigger sofaTrigger;       
-    // Tracks sleep state
-    private bool isSleeping = false;      
-    // Music before sleep
-    [SerializeField] public GameObject bgmAudio1; 
-    // Music after sleep
-    [SerializeField] public GameObject bgmAudio2; 
+    public Transform sleepPosition;
 
-    // Called when player interacts with the sofa
+    /// <summary>
+    /// The position where the player wakes up after sleeping.
+    /// </summary>
+    public Transform teleportTarget;
+
+    /// <summary>
+    /// Canvas group used for screen fade effects.
+    /// </summary>
+    [Header("Fade Settings")]
+    public CanvasGroup fadeCanvas;
+
+    /// <summary>
+    /// Duration of fade in and fade out effects.
+    /// </summary>
+    public float fadeDuration = 2f;
+
+    /// <summary>
+    /// Euler angles used to rotate the player upward during sleep.
+    /// </summary>
+    [Header("Rotation Settings")]
+    public Vector3 lookUpEuler = new Vector3(60f, 0f, 0f);
+
+    /// <summary>
+    /// Duration of the upward rotation animation.
+    /// </summary>
+    public float lookUpDuration = 2f;
+
+    /// <summary>
+    /// Reference to the sofa trigger used to control prompt visibility.
+    /// </summary>
+    [Header("References")]
+    public SofaTrigger sofaTrigger;
+
+    /// <summary>
+    /// Tracks whether the player is currently sleeping.
+    /// </summary>
+    private bool isSleeping = false;
+
+    /// <summary>
+    /// Background music to play before sleep.
+    /// </summary>
+    [SerializeField] public GameObject bgmAudio1;
+
+    /// <summary>
+    /// Background music to play after waking up.
+    /// </summary>
+    [SerializeField] public GameObject bgmAudio2;
+
+    /// <summary>
+    /// Initiates the sleep sequence when the player interacts with the sofa.
+    /// </summary>
+    /// <param name="player">The player GameObject.</param>
     public void TriggerSleep(GameObject player)
     {
         if (!isSleeping)
@@ -40,20 +75,21 @@ public class SofaInteraction : MonoBehaviour
         }
     }
 
-    // Runs the sleep and wake-up steps
+    /// <summary>
+    /// Coroutine that handles the full sleep and wake-up sequence.
+    /// </summary>
+    /// <param name="player">The player GameObject.</param>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator SleepSequence(GameObject player)
     {
         isSleeping = true;
 
-        // Stop player movement
         var controller = player.GetComponent<PlayerBehaviour>();
         if (controller) controller.enabled = false;
 
-        // Hide the prompt
         if (sofaTrigger != null)
             sofaTrigger.HidePrompt();
 
-        // Move player to sleep position
         if (sleepPosition != null)
         {
             var cc = player.GetComponent<CharacterController>();
@@ -65,17 +101,12 @@ public class SofaInteraction : MonoBehaviour
             if (cc != null) cc.enabled = true;
         }
 
-        // Play sleep animation
         var anim = player.GetComponent<Animator>();
         if (anim) anim.SetTrigger("Sleep");
 
-        // Rotate player upward
         yield return StartCoroutine(RotatePlayerUp(player));
-
-        // Fade screen to black
         yield return StartCoroutine(FadeOut());
 
-        // Move player to wake-up position
         if (teleportTarget != null)
         {
             var cc = player.GetComponent<CharacterController>();
@@ -87,16 +118,18 @@ public class SofaInteraction : MonoBehaviour
             if (cc != null) cc.enabled = true;
         }
 
-        // Fade screen back in
         yield return StartCoroutine(FadeIn());
 
-        // Allow player to move again
         if (controller) controller.enabled = true;
 
         isSleeping = false;
     }
 
-    // Smoothly rotates the player
+    /// <summary>
+    /// Smoothly rotates the player upward using the specified Euler angles.
+    /// </summary>
+    /// <param name="player">The player GameObject.</param>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator RotatePlayerUp(GameObject player)
     {
         Quaternion startRot = player.transform.rotation;
@@ -111,7 +144,10 @@ public class SofaInteraction : MonoBehaviour
         }
     }
 
-    // Fades screen to black
+    /// <summary>
+    /// Fades the screen to black by increasing the canvas alpha.
+    /// </summary>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator FadeOut()
     {
         float t = 0;
@@ -124,7 +160,10 @@ public class SofaInteraction : MonoBehaviour
         }
     }
 
-    // Fades screen from black
+    /// <summary>
+    /// Fades the screen from black by decreasing the canvas alpha.
+    /// </summary>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator FadeIn()
     {
         float t = 0;

@@ -1,32 +1,39 @@
-using UnityEngine; 
-using System.Collections; 
+using UnityEngine;
+using System.Collections;
 
-// Singleton class to run coroutines globally
+/// <summary>
+/// Singleton class that allows coroutines to be run globally from non-MonoBehaviour scripts.
+/// </summary>
 public class CoroutineRunner : MonoBehaviour
 {
-    // Static reference to the singleton instance
+    /// <summary>
+    /// Static reference to the singleton instance.
+    /// </summary>
     private static CoroutineRunner _instance;
-    // Public accessor for the singleton
+
+    /// <summary>
+    /// Public accessor for the singleton instance.
+    /// Creates the instance if it doesn't exist and ensures it persists across scenes.
+    /// </summary>
     public static CoroutineRunner Instance
     {
         get
         {
-            // If instance doesn't exist
             if (_instance == null)
             {
-                // Create new GameObject
-                // Attach this script
-                // Persist across scenes
                 GameObject runner = new GameObject("CoroutineRunner");
                 _instance = runner.AddComponent<CoroutineRunner>();
                 DontDestroyOnLoad(runner);
             }
-            // Return the instance
             return _instance;
         }
     }
-    // Method to start a coroutine
-    // Start and return coroutine
+
+    /// <summary>
+    /// Starts a coroutine using the singleton instance.
+    /// </summary>
+    /// <param name="coroutine">The coroutine to run.</param>
+    /// <returns>The Coroutine object.</returns>
     public Coroutine RunCoroutine(IEnumerator coroutine)
     {
         return StartCoroutine(coroutine);

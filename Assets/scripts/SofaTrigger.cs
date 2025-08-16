@@ -1,36 +1,55 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Handles sofa interaction and prompt display
+/// <summary>
+/// Detects when the player is near the sofa and displays a sleep prompt.
+/// Initiates the sleep interaction when the player presses the interaction key.
+/// </summary>
 public class SofaTrigger : MonoBehaviour
 {
-    // UI shown when player is near
-    public GameObject sleepPromptUI; 
-    // Link to sleep logic
-    public SofaInteraction sofaInteraction; 
-    // Tracks if player is close
-    private bool playerInRange = false; 
-    // Stores player object
-    private GameObject currentPlayer;   
+    /// <summary>
+    /// UI element shown when the player is near the sofa.
+    /// </summary>
+    public GameObject sleepPromptUI;
 
-    // Hide prompt from other scripts
+    /// <summary>
+    /// Reference to the sofa interaction logic.
+    /// </summary>
+    public SofaInteraction sofaInteraction;
+
+    /// <summary>
+    /// Tracks whether the player is currently within the trigger zone.
+    /// </summary>
+    private bool playerInRange = false;
+
+    /// <summary>
+    /// Stores a reference to the player GameObject.
+    /// </summary>
+    private GameObject currentPlayer;
+
+    /// <summary>
+    /// Hides the sleep prompt UI. Can be called externally.
+    /// </summary>
     public void HidePrompt()
     {
         if (sleepPromptUI != null)
             sleepPromptUI.SetActive(false);
     }
 
+    /// <summary>
+    /// Initializes the trigger by hiding the sleep prompt at game start.
+    /// </summary>
     void Start()
     {
-        // Hide prompt at game start
         if (sleepPromptUI != null)
             sleepPromptUI.SetActive(false);
     }
 
+    /// <summary>
+    /// Checks for player input while in range and triggers sleep interaction.
+    /// </summary>
     void Update()
     {
-        // If player is near and presses E
-        // Start sleep sequence
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             if (sofaInteraction != null && currentPlayer != null)
@@ -40,12 +59,13 @@ public class SofaTrigger : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called when a collider enters the trigger zone.
+    /// Displays the sleep prompt if the player enters.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
     void OnTriggerEnter(Collider other)
     {
-        // If player enters trigger zone:
-        // Save player reference
-        // Mark player as nearby
-        // Show sleep prompt
         if (other.CompareTag("Player"))
         {
             currentPlayer = other.gameObject;
@@ -56,12 +76,13 @@ public class SofaTrigger : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called when a collider exits the trigger zone.
+    /// Hides the sleep prompt if the player leaves.
+    /// </summary>
+    
     void OnTriggerExit(Collider other)
     {
-        // If player leaves trigger zone:
-        // Clear player reference
-        // Mark player as gone
-        // Hide sleep prompt
         if (other.CompareTag("Player"))
         {
             currentPlayer = null;

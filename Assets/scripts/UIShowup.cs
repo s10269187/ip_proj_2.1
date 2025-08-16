@@ -1,50 +1,86 @@
 using UnityEngine;
 using TMPro;
 
-// Show and update task UI based on player zone
+/// <summary>
+/// Displays and updates task UI based on the player's current zone.
+/// Tracks task completion and applies strikethrough formatting.
+/// </summary>
 public class UIShowUp : MonoBehaviour
 {
+    /// <summary>
+    /// Represents a zone with associated UI and task triggers.
+    /// </summary>
     [System.Serializable]
     public class ZoneUI
     {
-        // Zone label
-        public string zoneName;       
-        // Zone area          
+        /// <summary>
+        /// Label name for the zone.
+        /// </summary>
+        public string zoneName;
+
+        /// <summary>
+        /// Collider that defines the zone area.
+        /// </summary>
         public Collider zoneTrigger;
 
-        // Shared UI
-        // Zone title
-        public TextMeshProUGUI taskText;   
-        // Divider     
+        /// <summary>
+        /// UI element for the zone title.
+        /// </summary>
+        public TextMeshProUGUI taskText;
+
+        /// <summary>
+        /// UI element for the divider line.
+        /// </summary>
         public TextMeshProUGUI taskDash;
 
-        // Zone-specific tasks
-        // Task 1 text
-        public TextMeshProUGUI task1;           
-        // Task 2 text
-        public TextMeshProUGUI task2; 
-        // Task 3 text          
+        /// <summary>
+        /// UI element for task 1.
+        /// </summary>
+        public TextMeshProUGUI task1;
+
+        /// <summary>
+        /// UI element for task 2.
+        /// </summary>
+        public TextMeshProUGUI task2;
+
+        /// <summary>
+        /// UI element for task 3.
+        /// </summary>
         public TextMeshProUGUI task3;
 
-        // Task triggers
-        // Task 1 trigger
-        public Collider task1Trigger; 
-        // Task 2 trigger          
-        public Collider task2Trigger;  
-        // Task 3 trigger         
+        /// <summary>
+        /// Trigger collider for task 1.
+        /// </summary>
+        public Collider task1Trigger;
+
+        /// <summary>
+        /// Trigger collider for task 2.
+        /// </summary>
+        public Collider task2Trigger;
+
+        /// <summary>
+        /// Trigger collider for task 3.
+        /// </summary>
         public Collider task3Trigger;
 
-        // Task completion flags
-        // Task 1 done
-        [HideInInspector] public bool task1Struck = false; 
-        // Task 2 done
-        [HideInInspector] public bool task2Struck = false; 
-        // Task 3 done
+        /// <summary>
+        /// Flag indicating whether task 1 is completed.
+        /// </summary>
+        [HideInInspector] public bool task1Struck = false;
+
+        /// <summary>
+        /// Flag indicating whether task 2 is completed.
+        /// </summary>
+        [HideInInspector] public bool task2Struck = false;
+
+        /// <summary>
+        /// Flag indicating whether task 3 is completed.
+        /// </summary>
         [HideInInspector] public bool task3Struck = false;
 
-        // Show all UI elements
-        // Show zone title, divider, and tasks
-        // Apply strikethroughs
+        /// <summary>
+        /// Shows all UI elements for the zone and applies strikethroughs to completed tasks.
+        /// </summary>
         public void Show()
         {
             taskText?.gameObject.SetActive(true);
@@ -56,25 +92,21 @@ public class UIShowUp : MonoBehaviour
             ApplyStrikethroughs();
         }
 
-        // Hide all UI elements
-        // Hide zone title
-        // Hide divider
-        // Hide task 1
-        // Hide task 2
-        // Hide task 3
+        /// <summary>
+        /// Hides all UI elements for the zone.
+        /// </summary>
         public void Hide()
         {
             taskText?.gameObject.SetActive(false);
             taskDash?.gameObject.SetActive(false);
             task1?.gameObject.SetActive(false);
-            task2?.gameObject.SetActive(false);    
-            task3?.gameObject.SetActive(false);    
+            task2?.gameObject.SetActive(false);
+            task3?.gameObject.SetActive(false);
         }
 
-        // Apply strikethroughs to completed tasks]
-        // Strike task 1
-        // Strike task 2
-        // Strike task 3
+        /// <summary>
+        /// Applies strikethrough formatting to completed tasks.
+        /// </summary>
         public void ApplyStrikethroughs()
         {
             if (task1Struck && task1 != null)
@@ -87,38 +119,50 @@ public class UIShowUp : MonoBehaviour
                 task3.text = "<s>" + StripTags(task3.text) + "</s>";
         }
 
-        // Remove strikethrough tags
-        // Clean text
+        /// <summary>
+        /// Removes strikethrough tags from a string.
+        /// </summary>
+        /// <param name="input">The input string.</param>
+        /// <returns>Cleaned string without formatting tags.</returns>
         private string StripTags(string input)
         {
             return input.Replace("<s>", "").Replace("</s>", "");
         }
     }
 
-    // List of zones
+    /// <summary>
+    /// List of all defined zones with their UI and triggers.
+    /// </summary>
     public ZoneUI[] zones;
 
-    // Currently active zone
+    /// <summary>
+    /// The currently active zone the player is in.
+    /// </summary>
     private ZoneUI currentZone = null;
 
-    // Player position reference
+    /// <summary>
+    /// Reference to the player's transform used for zone detection.
+    /// </summary>
     public Transform playerTransform;
 
+    /// <summary>
+    /// Hides all zone UI elements at the start of the game.
+    /// </summary>
     void Start()
     {
-        // Hide all zone UI at start
         foreach (var zone in zones)
         {
             zone.Hide();
         }
     }
 
+    /// <summary>
+    /// Checks which zone the player is currently in and updates the UI accordingly.
+    /// </summary>
     void Update()
     {
         ZoneUI activeZone = null;
 
-        // Check which zone player is in
-        // Set active zone
         foreach (var zone in zones)
         {
             if (zone.zoneTrigger != null && zone.zoneTrigger.bounds.Contains(playerTransform.position))
@@ -128,9 +172,6 @@ public class UIShowUp : MonoBehaviour
             }
         }
 
-        // Switch UI if zone changed
-        // Hide previous zone UI
-        // Show new zone UI
         if (activeZone != currentZone)
         {
             currentZone?.Hide();
@@ -139,11 +180,12 @@ public class UIShowUp : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Detects when the player enters a task trigger and marks the corresponding task as completed.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
     void OnTriggerEnter(Collider other)
     {
-        // Check task triggers
-        // Mark tasks done
-        // Update UI
         foreach (var zone in zones)
         {
             if (zone.task1Trigger != null && other == zone.task1Trigger && !zone.task1Struck)
@@ -154,14 +196,14 @@ public class UIShowUp : MonoBehaviour
 
             if (zone.task2Trigger != null && other == zone.task2Trigger && !zone.task2Struck)
             {
-                zone.task2Struck = true;         
-                zone.ApplyStrikethroughs();      
+                zone.task2Struck = true;
+                zone.ApplyStrikethroughs();
             }
 
             if (zone.task3Trigger != null && other == zone.task3Trigger && !zone.task3Struck)
             {
-                zone.task3Struck = true;         
-                zone.ApplyStrikethroughs();      
+                zone.task3Struck = true;
+                zone.ApplyStrikethroughs();
             }
         }
     }

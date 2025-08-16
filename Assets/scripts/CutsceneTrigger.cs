@@ -4,19 +4,51 @@ using StarterAssets;
 using UnityEngine.InputSystem;
 using System.Collections;
 
-
+/// <summary>
+/// Triggers a timeline cutscene when the player enters a collider,
+/// disables player controls during the cutscene, and teleports the player afterward.
+/// </summary>
 public class CutsceneTrigger : MonoBehaviour
 {
+    /// <summary>
+    /// The timeline cutscene to play.
+    /// </summary>
     [Header("References")]
-    public PlayableDirector cutsceneDirector;              // Assign in Inspector
-    public GhostTyping ghostTypingScript;                  // Assign in Inspector
-    public FirstPersonController playerController;         // Assign in Inspector
-    public Transform teleportTarget;                       // Assign in Inspector
+    public PlayableDirector cutsceneDirector;
 
+    /// <summary>
+    /// Script that handles ghost typing visual effect.
+    /// </summary>
+    public GhostTyping ghostTypingScript;
+
+    /// <summary>
+    /// Reference to the player's movement controller.
+    /// </summary>
+    public FirstPersonController playerController;
+
+    /// <summary>
+    /// The target position and rotation to teleport the player to after the cutscene.
+    /// </summary>
+    public Transform teleportTarget;
+
+    /// <summary>
+    /// Reference to the player's input system.
+    /// </summary>
     private PlayerInput playerInput;
+
+    /// <summary>
+    /// Reference to the player's character controller for physics movement.
+    /// </summary>
     private CharacterController characterController;
+
+    /// <summary>
+    /// Flag to ensure the cutscene is only triggered once.
+    /// </summary>
     private bool hasTriggered = false;
 
+    /// <summary>
+    /// Initializes references and prepares the cutscene.
+    /// </summary>
     void Start()
     {
         if (cutsceneDirector != null)
@@ -34,6 +66,10 @@ public class CutsceneTrigger : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Detects when the player enters the trigger zone and starts the cutscene sequence.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
     void OnTriggerEnter(Collider other)
     {
         if (hasTriggered || cutsceneDirector == null) return;
@@ -45,49 +81,47 @@ public class CutsceneTrigger : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Coroutine that disables player controls, starts the cutscene, and activates ghost typing.
+    /// </summary>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator TriggerCutsceneSequence()
     {
-        // Disable player movement and input
         if (playerController != null)
         {
             playerController.enabled = false;
             if (playerInput != null) playerInput.enabled = false;
             if (characterController != null) characterController.enabled = false;
-            Debug.Log("🚫 Player controls disabled.");
         }
 
-        yield return new WaitForSeconds(0.1f); // Small delay to ensure disable takes effect
+        yield return new WaitForSeconds(0.1f);
 
-        // Start cutscene
         cutsceneDirector.enabled = true;
         cutsceneDirector.Play();
-        Debug.Log("🎬 Cutscene started.");
 
-        // Start ghost typing
         if (ghostTypingScript != null)
         {
             ghostTypingScript.StartTyping();
-            Debug.Log("👻 GhostTyping started.");
         }
     }
 
+    /// <summary>
+    /// Called when the cutscene ends. Teleports the player and re-enables controls.
+    /// </summary>
+    /// <param name="director">The PlayableDirector that finished playing.</param>
     void OnCutsceneEnded(PlayableDirector director)
     {
-        // Teleport player after cutscene ends
         if (teleportTarget != null && playerController != null)
         {
             playerController.transform.position = teleportTarget.position;
             playerController.transform.rotation = teleportTarget.rotation;
-            Debug.Log("📍 Player teleported after cutscene.");
         }
 
-        // Re-enable player controls
         if (playerController != null)
         {
             playerController.enabled = true;
             if (playerInput != null) playerInput.enabled = true;
             if (characterController != null) characterController.enabled = true;
-            Debug.Log("✅ Player controls re-enabled after cutscene.");
         }
     }
 }

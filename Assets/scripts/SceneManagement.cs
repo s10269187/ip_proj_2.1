@@ -3,78 +3,100 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
+/// <summary>
+/// Handles scene transitions with fade effects and player teleportation to designated spawn points.
+/// </summary>
 public class SceneManagement : MonoBehaviour
 {
-    // UI image used for fade effect
+    /// <summary>
+    /// UI image used to perform fade in/out effects.
+    /// </summary>
     [Header("Fade Settings")]
-    public Image fadeImage; 
-    // Duration of fade in/out
-    public float fadeDuration = 1f; 
-    // Scene to teleport to
-    [Header("Teleport Settings")]
-    public string targetScene = "RETURN_ms"; 
-    // Name of spawn point in target scene
-    public string spawnPointName = "spawn_return"; 
-    // Called when the script instance is being loaded
-    
+    public Image fadeImage;
 
+    /// <summary>
+    /// Duration of the fade effect in seconds.
+    /// </summary>
+    public float fadeDuration = 1f;
+
+    /// <summary>
+    /// Name of the scene to load when teleporting.
+    /// </summary>
+    [Header("Teleport Settings")]
+    public string targetScene = "RETURN_ms";
+
+    /// <summary>
+    /// Name of the spawn point in the target scene.
+    /// </summary>
+    public string spawnPointName = "spawn_return";
+
+    /// <summary>
+    /// Loads the main scene immediately.
+    /// </summary>
     public void LoadMainScene()
     {
         SceneManager.LoadScene("mainscene");
     }
 
-
-    
+    /// <summary>
+    /// Called on start. If the current scene matches the target scene,
+    /// moves the player to the designated spawn point and fades in.
+    /// </summary>
     void Start()
     {
-        // If the current scene is the target scene, move player to the designated spawn point
         if (SceneManager.GetActiveScene().name == targetScene)
         {
-            // Fade in from black
             MovePlayerToSpawn();
-            StartCoroutine(FadeIn()); 
+            StartCoroutine(FadeIn());
         }
     }
 
+    /// <summary>
+    /// Detects when the player enters the trigger and initiates the teleport sequence.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
     private void OnTriggerEnter(Collider other)
     {
-        // When player enters trigger, start teleport sequence
         if (other.CompareTag("Player"))
         {
             StartCoroutine(FadeTeleport());
         }
     }
 
+    /// <summary>
+    /// Coroutine that fades out, saves the spawn point name, and loads the target scene.
+    /// </summary>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator FadeTeleport()
     {
-        // Fade out to black
         yield return StartCoroutine(FadeOut());
 
-        // Save spawn point name for use in the next scene
         PlayerPrefs.SetString("SpawnPoint", spawnPointName);
-
-        // Load the target scene
         SceneManager.LoadScene(targetScene);
     }
 
+    /// <summary>
+    /// Moves the player to the saved or default spawn point in the scene.
+    /// </summary>
     void MovePlayerToSpawn()
     {
-        // Retrieve saved spawn point name or use default
         string spawnName = PlayerPrefs.GetString("SpawnPoint", "spawn_return");
         GameObject spawnPoint = GameObject.Find(spawnName);
 
         if (spawnPoint != null)
         {
-            // Move player to spawn point position and rotation
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = spawnPoint.transform.position;
             player.transform.rotation = spawnPoint.transform.rotation;
         }
     }
 
+    /// <summary>
+    /// Coroutine that fades the screen to black by increasing the alpha of the fade image.
+    /// </summary>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator FadeOut()
     {
-        // Gradually increase alpha to fade to black
         float elapsed = 0f;
         Color color = fadeImage.color;
 
@@ -87,9 +109,12 @@ public class SceneManagement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Coroutine that fades the screen from black by decreasing the alpha of the fade image.
+    /// </summary>
+    /// <returns>Coroutine enumerator.</returns>
     IEnumerator FadeIn()
     {
-        // Gradually decrease alpha to fade from black
         float elapsed = 0f;
         Color color = fadeImage.color;
 
