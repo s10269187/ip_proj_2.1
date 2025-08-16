@@ -37,13 +37,23 @@
 | Interact           | E                    |
 | Pick Up            | R                    |
 | Place              | Q                    |
+| Throw              | Left click           |
+
 
 # Recommended Requirements
-- Operating System: Windows 10/11 (64-bit) / macOS 10.15 or later
-- Processor: Intel Core i5 or better
+- Operating System: Windows 10/11 (64-bit) / macOS Monterey 12.0 or later
+- Processor: Intel Core i7 or AMD Ryzen 5 and above
 - Memory: 8 GB RAM or higher
-- Graphics: Dedicated GPU with 2 GB VRAM or higher
-- Storage: At least 1 GB free disk space
+- Graphics: RAM: 16 GB or higher (for smoother workflow with large projects)
+- Storage: 5 GB free storage (SSD strongly recommended)
 
 # FSM Diagrams & AI Implementation Details
- 
+1) Grandpa in antique shop
+   Patrols -> idles
+   - Implementation: After he patrols along waypoints, he will idle on some parts of the store.
+2) Cars
+   Patrols -> loops
+   -Implementation: It patrols along a side of waypoints with 3D Audio added to it whereby when player is near car, it will be loud and will be soft when far from car.
+3) Ghost
+   Chases
+   -Implementation: It follows you to return the teapot to the antique shop and if it touches the player, the player will respawn to the spawn point.
