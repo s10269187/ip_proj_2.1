@@ -5,10 +5,10 @@
 /// <author> Aralyn Han Zi Ning </author>
 /// <date> 06/08/2025 </date>
 /// <StudentID> S10267170A </StudentID>
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -27,6 +27,12 @@ public class PlayerBehaviour : MonoBehaviour
     /// </summary>
     [Header("UI Settings")]
     public TextMeshProUGUI promptText;
+
+    /// <summary>
+    /// Reference to the task UI text that will be updated upon NPC interaction.
+    /// </summary>
+    [Header("Task UI")]
+    public TextMeshProUGUI taskText;
 
     /// <summary>
     /// Reference to the dialogue system used for NPC interactions.
@@ -132,6 +138,13 @@ public class PlayerBehaviour : MonoBehaviour
                     dialogueBox.gameObject.SetActive(true);
                     dialogueBox.enabled = true;
                     dialogueBox.StartDialogue();
+
+                    // Strike through the task text
+                    if (taskText != null)
+                    {
+                        taskText.text = "<s>" + StripTags(taskText.text) + "</s>";
+                        taskText.color = Color.gray;
+                    }
                 }
             }
             else
@@ -191,5 +204,13 @@ public class PlayerBehaviour : MonoBehaviour
                 Physics.SyncTransforms();
             }
         }
+    }
+
+    /// <summary>
+    /// Removes strikethrough tags from a string.
+    /// </summary>
+    private string StripTags(string input)
+    {
+        return input.Replace("<s>", "").Replace("</s>", "");
     }
 }
